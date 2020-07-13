@@ -8,40 +8,39 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:version="1.0 (4035a4f, 2020-05-01)"
-   sodipodi:docname="Logo_Claimr.svg"
-   id="svg875"
+   inkscape:export-ydpi="1536"
+   inkscape:export-xdpi="1536"
+   inkscape:export-filename="/Users/aknapen/Downloads/LOGO_Claimer/Pin_Logo.png"
+   sodipodi:docname="Pin_Logo.svg"
+   id="svg848"
    version="1.1"
-   viewBox="0 0 108 43"
-   height="43px"
-   width="108px"
-   inkscape:export-filename="/Users/aknapen/Downloads/LOGO_Claimer/Logo_Claimr_White_4096x1631.png"
-   inkscape:export-xdpi="3640.8899"
-   inkscape:export-ydpi="3640.8899">
+   viewBox="0 0 22 31"
+   height="31px"
+   width="22px">
   <metadata
-     id="metadata881">
+     id="metadata854">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Group 2</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs879" />
+     id="defs852" />
   <sodipodi:namedview
-     inkscape:pagecheckerboard="true"
-     inkscape:current-layer="Group-2"
+     inkscape:current-layer="Page-1"
      inkscape:window-maximized="1"
      inkscape:window-y="23"
      inkscape:window-x="0"
-     inkscape:cy="22.986816"
-     inkscape:cx="45.229846"
-     inkscape:zoom="9.8355761"
+     inkscape:cy="11.279075"
+     inkscape:cx="6.3542085"
+     inkscape:zoom="54.793212"
+     inkscape:snap-to-guides="true"
      showgrid="false"
-     id="namedview877"
+     id="namedview850"
      inkscape:window-height="1035"
      inkscape:window-width="2560"
      inkscape:pageshadow="2"
@@ -51,10 +50,9 @@
      objecttolerance="10"
      borderopacity="1"
      bordercolor="#666666"
-     pagecolor="#ffffff"
-     inkscape:document-rotation="0" />
+     pagecolor="#ffffff" />
   <title
-     id="title856">Group 2</title>
+     id="title833">pin</title>
   <g
      fill-rule="evenodd"
      fill="none"
@@ -62,24 +60,13 @@
      stroke="none"
      id="Page-1">
     <g
-       transform="translate(-347.000000, -111.000000)"
+       fill-rule="nonzero"
+       transform="translate(-354.000000, -117.000000)"
        id="-">
       <g
          transform="translate(347.000000, 111.000000)"
          id="Group-2">
-        <text
-           style="fill:#ffffff;fill-opacity:1;"
-           fill="#000000"
-           font-weight="bold"
-           font-size="20"
-           font-family="AvenirNext-Bold, Avenir Next"
-           id="ClaimR"><tspan
-             style="fill:#ffffff;fill-opacity:1;"
-             id="tspan859"
-             y="30"
-             x="32">ClaimR </tspan></text>
         <g
-           fill-rule="nonzero"
            transform="translate(7.000000, 6.000000)"
            id="pin">
           <path
@@ -89,20 +76,20 @@
           <path
              style="stroke-width:1.06904"
              fill="#ffffff"
-             id="path863"
+             id="path836"
              d="M 19,11.999779 C 19,15.859912 15.410936,19 11,19 6.5890636,19 3,15.859912 3,11.999779 3,8.1400878 6.5890636,5 11,5 c 4.410936,0 8,3.1400878 8,6.999779 z" />
           <path
              fill="#E30020"
-             id="path865"
+             id="path838"
              d="M22,11.535891 C22,15.0228584 20.3000882,17.7427546 18.4067584,20.4510536 L11,31 L11,0 L11.0437842,0 C17.0889432,0.0255611544 22,5.19057109 22,11.535891 L22,11.535891 Z" />
           <path
              fill="#D6D6D8"
-             id="path867"
+             id="path840"
              d="M19,11.999779 C19,15.8599122 15.4109364,19 11,19 L11,5 C15.4109364,5 19,8.14008778 19,11.999779 Z" />
           <polygon
              points="16 10.3074191 12.0019823 14.1288662 11.0903797 15 8 12.0135291 9.34597039 10.7132937 11.0980611 12.4062338 12.0019823 11.5420441 14.661711 9"
              fill="#0087FF"
-             id="polygon869" />
+             id="polygon842" />
         </g>
       </g>
     </g>
