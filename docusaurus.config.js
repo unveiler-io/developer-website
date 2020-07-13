@@ -1,6 +1,6 @@
 module.exports = {
   title: 'ClaimR Documentation',
-  tagline: 'The tagline of my site',
+  tagline: 'Get safe, verified locations based on raw GPS measurements data.',
   url: 'https://docs.claimr.tools',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
