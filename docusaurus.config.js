@@ -31,19 +31,23 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-        // {
-        //   title: 'Docs',
-        //   items: [
-        //     {
-        //       label: 'Style Guide',
-        //       to: 'docs/',
-        //     },
-        //     {
-        //       label: 'Second Doc',
-        //       to: 'docs/doc2/',
-        //     },
-        //   ],
-        // },
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Overview',
+              to: 'docs/',
+            },
+            {
+              label: 'Getting Started',
+              to: 'docs/api/getting-started',
+            },
+            {
+              label: 'React Native Client',
+              to: 'docs/clients/react-native',
+            }
+          ],
+        },
         {
           title: 'Social & Contact',
           items: [
