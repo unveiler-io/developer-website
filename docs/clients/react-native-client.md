@@ -1,6 +1,6 @@
 ---
-id: mdx
-title: Powered by MDX
+id: react-native-client
+title: React Native Client
 ---
 
 You can write JSX and use React components within your Markdown thanks to [MDX](https://mdxjs.com/).
