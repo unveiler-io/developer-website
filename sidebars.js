@@ -8,7 +8,7 @@ module.exports = {
       'api/example'
     ],
     Clients: [
-      'clients/react-native-client'
+      'clients/react-native'
     ],
   },
 }
