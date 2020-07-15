@@ -7,8 +7,10 @@ module.exports = {
       'api/getting-started',
       'api/example'
     ],
-    Clients: [
-      'clients/react-native'
+    "React Native": [
+      'react-native/overview',
+      'react-native/getting-started',
+      'react-native/api',
     ],
   },
 }
