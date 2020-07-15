@@ -78,7 +78,7 @@ const MyModule = () => {
 }
 ```
 
-For a more elaborate useage example, see our example React Native client [here](https://github.com/ClaimR/react-native-client/blob/master/example/src/App.tsx).
+For a more elaborate useage example, see our example React Native client [here](https://github.com/ClaimR/react-native-client/blob/master/example/src/App.tsx) and explore the [API](/docs/react-native/api).
 
 [claimr-dashboard]: https://dashboard.claimr.tools
 [npm-react-native-config]: https://www.npmjs.com/package/react-native-config
