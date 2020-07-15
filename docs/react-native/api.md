@@ -27,9 +27,12 @@ This can be done by calling the `submit` function once its defined by the hook.
 
 The hook tracks its state using the following state machine:
 ![State machine](/img/react-native-state-machine.png)
-The machine initially is in the `registeringListener` state, when it successfully registers the listener it will switch to the `listening` state.
+
+The machine is initially in the `registeringListener` state, when it successfully registers the listener it will switch to the `listening` state.
 Once enough raw GNSS data has been collected, it will move to `ready`.
 In every state which has an outgoing edge with `submit` you can request the location to get verified. 
+
+> An iteractive version of the state machine can be explored [here](https://xstate.js.org/viz/?gist=2cccde93b8c36974fc5ebe6e4c147595).
 
 #### Parameters
 * `options`: <`Object`>
