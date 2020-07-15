@@ -292,3 +292,7 @@ $RECYCLE.BIN/
 
 # Docusaurus generated files
 .docusaurus/
+
+# Ignore all of Visual Studio Code
+.vscode/
+
