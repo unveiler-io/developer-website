@@ -53,7 +53,11 @@ import { ClaimrClient } from '@claimr/react-native-client'
 const client = new ClaimrClient({ apiKey: 'YOUR_API_KEY' })
 ```
 
-> Note: To circumvent hard-coding the API key, we recommend storing them outside your code-base, for example using [react-native-config][npm-react-native-config] or other similar tools.
+:::note
+
+To circumvent hard-coding the API key, we recommend storing them outside your code-base, for example using [react-native-config][npm-react-native-config] or other similar tools.
+
+:::
 
 ## Verify Location Hook
 
