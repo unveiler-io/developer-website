@@ -1,6 +1,6 @@
 module.exports = {
   title: 'ClaimR Documentation',
-  tagline: 'The easy way to verify your user\'s location. Anywhere. Anytime.',
+  tagline: "The easy way to verify your user's location. Anywhere. Anytime.",
   url: 'https://docs.claimr.tools',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
@@ -45,7 +45,7 @@ module.exports = {
             {
               label: 'React Native Client',
               to: 'docs/clients/react-native',
-            }
+            },
           ],
         },
         {
@@ -57,13 +57,13 @@ module.exports = {
             },
             {
               label: 'YouTube',
-              href: 'https://www.youtube.com/channel/UCZRWpBaWAeLP6uYLE0kDbRg'
+              href: 'https://www.youtube.com/channel/UCZRWpBaWAeLP6uYLE0kDbRg',
             },
             {
               label: 'Email',
               href: 'mailto:contact@claimr.tools',
-            }
-          ]
+            },
+          ],
         },
         // {
         //   title: 'Community',
@@ -116,14 +116,12 @@ module.exports = {
           homePageId: 'overview',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/claimr/docs/edit/master/website/',
+          editUrl: 'https://github.com/claimr/docs/edit/master/website/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/claimr/docs/edit/master/website/blog/',
+          editUrl: 'https://github.com/claimr/docs/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -131,4 +129,4 @@ module.exports = {
       },
     ],
   ],
-};
+}

@@ -4,13 +4,16 @@ title: Getting Started
 ---
 
 ## Installation
-First start by adding the React Native client as a dependency to your React Native project. 
+
+First start by adding the React Native client as a dependency to your React Native project.
 If you're using NPM, then run:
+
 ```bash
 npm install @claimr/react-native-client
 ```
 
 If you're using Yarn, run:
+
 ```bash
 yarn add @claimr/react-native-client
 ```
@@ -49,6 +52,7 @@ import { ClaimrClient } from '@claimr/react-native-client'
 
 const client = new ClaimrClient({ apiKey: 'YOUR_API_KEY' })
 ```
+
 > Note: To circumvent hard-coding the API key, we recommend storing them outside your code-base, for example using [react-native-config][npm-react-native-config] or other similar tools.
 
 ## Verify Location Hook
@@ -72,7 +76,7 @@ const MyModule = () => {
           {claim.location.latitude}, {claim.location.longitude}
         </Text>
       )}
-      { jwt && <Text>JWT: {jwt}</Text>}
+      {jwt && <Text>JWT: {jwt}</Text>}
     </>
   )
 }
