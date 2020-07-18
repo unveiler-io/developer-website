@@ -28,16 +28,17 @@ const features = [
     ),
     link: 'docs/react-native/getting-started',
   },
-  // {
-  //   title: <>Powered by React</>,
-  //   imageUrl: 'img/undraw_docusaurus_react.svg',
-  //   description: (
-  //     <>
-  //       Extend or customize your website layout by reusing React. Docusaurus can
-  //       be extended while reusing the same header and footer.
-  //     </>
-  //   ),
-  // },
+  {
+    title: <>Same Permissions. More Info</>,
+    imageUrl: 'img/undraw_my_location.svg',
+    description: (
+      <>
+        We require the same permissions on Android as needed for accessing the user's location. A lot of value
+        is left on the table by not using the raw GPS measurements you already requested access to.
+      </>
+    ),
+    link: 'docs/react-native/requirements',
+  },
 ]
 
 function Feature({ imageUrl, title, description, link }) {
