@@ -22,7 +22,7 @@ yarn add @claimr/react-native-client
 
 Add the `GnssLoggerPackage` to the packages of your React application.
 
-```java
+```java {2,13}
 // Add the import
 import tools.claimr.reactnativeclient.GnssLoggerPackage;
 
@@ -62,7 +62,7 @@ In the background this hook will collect GNSS data.
 Once enough data has been collected, the `submit` function will be populated, which when invoked will send recent GNSS data to the ClaimR API to verify the current location.
 After the location is verified, the results will be available in `claim` and also encoded as a JWT in `jwt`.
 
-```typescript
+```tsx
 import { useLazyVerifiedLocation } from '@claimr/react-native-client'
 
 const MyModule = () => {

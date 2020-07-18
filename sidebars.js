@@ -1,6 +1,6 @@
 module.exports = {
   docs: {
-    ClaimR: ['overview'],
+    ClaimR: ['overview', 'use-cases'],
     API: ['api/getting-started', 'api/example'],
     'React Native': [
       'react-native/overview',
