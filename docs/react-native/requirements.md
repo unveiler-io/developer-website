@@ -13,6 +13,7 @@ The following requirements needs to be satisfied for a device to support the Cla
 - Android 7 or newer
 - [`ACCESS_FINE_LOCATION`](https://developer.android.com/reference/android/Manifest.permission#ACCESS_FINE_LOCATION) permission
 - Raw GNSS meaurements support
-  - Partial list available at [useGalileo.eu](https://www.usegalileo.eu/EN/inner.html#data=smartphone)
+  - Required from Android 10 and above
+  - Partial list of hardware support available at [useGalileo.eu](https://www.usegalileo.eu/EN/inner.html#data=smartphone)
 
 The simplest method to test if your device supports collecting raw GNSS measurements is to install the [GNSSLogger](https://github.com/google/gps-measurement-tools/releases/tag/2.0.0.1) app.
