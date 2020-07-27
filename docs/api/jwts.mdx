@@ -3,6 +3,9 @@ id: jwts
 title: JWTs
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 In the [Getting Started](/docs/api/getting-started#interpretting-the-results) guide we have already encountered a JSON Web Token (JWT).
 The response of our query had a field `jwt` with as its value a long and odd looking string:
 
@@ -29,7 +32,21 @@ When selecting a library, ensure that it at least supports `RS256`, which should
 
 After the JWT is verified, inspect the content and apply your business logic to validate that the content matches with what you expected to find.
 
-### JavaScript using `jsonwebtoken`
+### Download ClaimR's Public Key
+
+Download the ClaimR public key from [here](/keys/public.pem) and save it as `public.pem` in your source code directory. Now we can verify the token using the following code.
+
+### Install Dependencies
+
+<Tabs
+  groupId="programming-language"
+  defaultValue="ts"
+  values={[
+    {label: 'JavaScript', value: 'js'},
+    {label: 'TypeScript', value: 'ts'},
+  ]}
+>
+<TabItem value="js">
 
 Here we will showcase how to verify a ClaimR signed JWT using the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) library, which is created and maintained by [Auth0](https://auth0.com/).
 To install the dependency run:
@@ -44,15 +61,44 @@ Or when using Yarn:
 yarn add jsonwebtoken
 ```
 
-Then download the ClaimR public key from [here](/keys/public.pem) and save it as `public.pem` in your source code directory. Now we can verify the token using the following code.
+</TabItem>
+<TabItem value="ts">
+
+Here we will showcase how to verify a ClaimR signed JWT using the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) library, which is created and maintained by [Auth0](https://auth0.com/).
+To install it as a dependency together with its types:
+
+```bash
+npm install jsonwebtoken
+npm install --save-dev @types/jsonwebtoken
+```
+
+Or when using Yarn:
+
+```bash
+yarn add jsonwebtoken
+yarn add -D @types/jsonwebtoken
+```
+
+</TabItem>
+</Tabs>
+
+### Verify the Token
+<Tabs
+  groupId="programming-language"
+  defaultValue="ts"
+  values={[
+    {label: 'JavaScript', value: 'js'},
+    {label: 'TypeScript', value: 'ts'},
+  ]}
+>
+<TabItem value="js">
 
 ```javascript
 const { verify } = require('jsonwebtoken')
 const { readFileSync } = require('fs')
 
 const claimrPublicKey = readFileSync('public.pem')
-const jwt =
-  'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGFpbSI6eyJwb2ludCI6eyJsb2NhdGlvbiI6eyJsYXRpdHVkZSI6NTIuOTUxOSwibG9uZ2l0dWRlIjotMS4xODQxfSwicmFkaXVzIjoxMDB9fSwicHJvb2YiOiJHTlNTIiwiaWF0IjoxNTk1ODQ2Mjc2fQ.Ko1otS6zZpZ1JpYymZpGXM22v7GQW0wqcU4cum_Yxb0xrbM2UGHCIwpKEvkOgA-ITEjj65AgLfs8AmNJJbUFMzVZmaATvVoy_wW2JMUn2oHcBstzc5wMUYrELjmGy0oOXJcdxX_EirKVkBaOW1FPf_m2iMZLxsLAhd9S2Afj8ICCnVULyuPCNxfsED-cqOdgzrIBzyHfq6jx9CclvK_Bo-uMML5_OymsvyLnFNCXplPbGx9pG2qjzBFp_K-zEnHlgRDxKUIkfn-9VxPYErQIFG7N4_lvJ_XN8XNiec6OW-WOkEpRaTiyfqzHYsoZy057c7D4gznr98Yl-NrFAVKT_Q'
+const jwt = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGFpbSI6eyJwb2ludCI6eyJsb2NhdGlvbiI6eyJsYXRpdHVkZSI6NTIuOTUxOSwibG9uZ2l0dWRlIjotMS4xODQxfSwicmFkaXVzIjoxMDB9fSwicHJvb2YiOiJHTlNTIiwiaWF0IjoxNTk1ODQ2Mjc2fQ.Ko1otS6zZpZ1JpYymZpGXM22v7GQW0wqcU4cum_Yxb0xrbM2UGHCIwpKEvkOgA-ITEjj65AgLfs8AmNJJbUFMzVZmaATvVoy_wW2JMUn2oHcBstzc5wMUYrELjmGy0oOXJcdxX_EirKVkBaOW1FPf_m2iMZLxsLAhd9S2Afj8ICCnVULyuPCNxfsED-cqOdgzrIBzyHfq6jx9CclvK_Bo-uMML5_OymsvyLnFNCXplPbGx9pG2qjzBFp_K-zEnHlgRDxKUIkfn-9VxPYErQIFG7N4_lvJ_XN8XNiec6OW-WOkEpRaTiyfqzHYsoZy057c7D4gznr98Yl-NrFAVKT_Q'
 
 verify(jwt, claimrPublicKey, { algorithms: ['RS256'] })
 // {
@@ -62,21 +108,23 @@ verify(jwt, claimrPublicKey, { algorithms: ['RS256'] })
 // }
 ```
 
-Note that we explicitely mention the JWT algorithm we expect, namely `RS256`.
-Ommitting this makes your implementation vulnarable to [security issues](https://auth0.com/blog/critical-vulnerabilities-in-json-web-token-libraries/).
-If our JWT would be tampered with, then verify would throw a `JsonWebTokenError`.
+:::important
+Make sure to explicitely specify the expected algorithm as `RS256`.
+Not doing so results in a security vulnerability, as the default behaviour is to infer the algorithm from the token.
+:::
 
-### TypeScript using `jsonwebtoken`
 
-Verify similar to the [JavaScript variant](#javascript-using-jsonwebtoken), we merely need to change the imports and add the `@types/jsonwebtoken` dependency to get type hinting.
+If our JWT would be tampered with, then verify would throw a `JsonWebTokenError` instead of returning the content of the JWT.
 
-```typescript {1,2}
+</TabItem>
+<TabItem value="ts">
+
+```typescript
 import { verify } from 'jsonwebtoken'
 import { readFileSync } from 'fs'
 
 const claimrPublicKey = readFileSync('public.pem')
-const jwt =
-  'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGFpbSI6eyJwb2ludCI6eyJsb2NhdGlvbiI6eyJsYXRpdHVkZSI6NTIuOTUxOSwibG9uZ2l0dWRlIjotMS4xODQxfSwicmFkaXVzIjoxMDB9fSwicHJvb2YiOiJHTlNTIiwiaWF0IjoxNTk1ODQ2Mjc2fQ.Ko1otS6zZpZ1JpYymZpGXM22v7GQW0wqcU4cum_Yxb0xrbM2UGHCIwpKEvkOgA-ITEjj65AgLfs8AmNJJbUFMzVZmaATvVoy_wW2JMUn2oHcBstzc5wMUYrELjmGy0oOXJcdxX_EirKVkBaOW1FPf_m2iMZLxsLAhd9S2Afj8ICCnVULyuPCNxfsED-cqOdgzrIBzyHfq6jx9CclvK_Bo-uMML5_OymsvyLnFNCXplPbGx9pG2qjzBFp_K-zEnHlgRDxKUIkfn-9VxPYErQIFG7N4_lvJ_XN8XNiec6OW-WOkEpRaTiyfqzHYsoZy057c7D4gznr98Yl-NrFAVKT_Q'
+const jwt = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGFpbSI6eyJwb2ludCI6eyJsb2NhdGlvbiI6eyJsYXRpdHVkZSI6NTIuOTUxOSwibG9uZ2l0dWRlIjotMS4xODQxfSwicmFkaXVzIjoxMDB9fSwicHJvb2YiOiJHTlNTIiwiaWF0IjoxNTk1ODQ2Mjc2fQ.Ko1otS6zZpZ1JpYymZpGXM22v7GQW0wqcU4cum_Yxb0xrbM2UGHCIwpKEvkOgA-ITEjj65AgLfs8AmNJJbUFMzVZmaATvVoy_wW2JMUn2oHcBstzc5wMUYrELjmGy0oOXJcdxX_EirKVkBaOW1FPf_m2iMZLxsLAhd9S2Afj8ICCnVULyuPCNxfsED-cqOdgzrIBzyHfq6jx9CclvK_Bo-uMML5_OymsvyLnFNCXplPbGx9pG2qjzBFp_K-zEnHlgRDxKUIkfn-9VxPYErQIFG7N4_lvJ_XN8XNiec6OW-WOkEpRaTiyfqzHYsoZy057c7D4gznr98Yl-NrFAVKT_Q'
 
 verify(jwt, claimrPublicKey, { algorithms: ['RS256'] })
 // {
@@ -85,6 +133,17 @@ verify(jwt, claimrPublicKey, { algorithms: ['RS256'] })
 //   iat: 1595846276
 // }
 ```
+
+:::important
+Make sure to explicitely specify the expected algorithm as `RS256`.
+Not doing so results in a security vulnerability, as the default behaviour is to infer the algorithm from the token.
+:::
+
+
+If our JWT would be tampered with, then verify would throw a `JsonWebTokenError` instead of returning the content of the JWT.
+
+</TabItem>
+</Tabs>
 
 ## The Subject Field `sub`
 
