@@ -13,7 +13,7 @@ module.exports = {
         alt: 'ClaimR Logo',
         src: 'img/icon.svg',
       },
-      links: [
+      items: [
         {
           to: 'docs/',
           activeBasePath: 'docs',
