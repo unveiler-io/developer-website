@@ -79,7 +79,7 @@ After a couple of seconds your location verification request will be resolved an
       "status": "GRANTED",
       "tokenResponse": {
         "token": {
-          "iat": "1595076919",
+          "iat": "1595846276",
           "claim": {
             "point": {
               "location": {
@@ -90,7 +90,7 @@ After a couple of seconds your location verification request will be resolved an
             }
           }
         },
-        "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTUwNzY5MTksImNsYWltIjp7InBvaW50Ijp7ImxvY2F0aW9uIjp7ImxhdGl0dWRlIjo1Mi45NTE5LCJsb25naXR1ZGUiOi0xLjE4NDF9LCJyYWRpdXMiOjEwMH19LCJwcm9vZiI6IkdOU1MifQ.XzgF7xG48prH16jYc9frdpB2AC5Zx6G9aq4ogQalqgU"
+        "jwt": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGFpbSI6eyJwb2ludCI6eyJsb2NhdGlvbiI6eyJsYXRpdHVkZSI6NTIuOTUxOSwibG9uZ2l0dWRlIjotMS4xODQxfSwicmFkaXVzIjoxMDB9fSwicHJvb2YiOiJHTlNTIiwiaWF0IjoxNTk1ODQ2Mjc2fQ.Ko1otS6zZpZ1JpYymZpGXM22v7GQW0wqcU4cum_Yxb0xrbM2UGHCIwpKEvkOgA-ITEjj65AgLfs8AmNJJbUFMzVZmaATvVoy_wW2JMUn2oHcBstzc5wMUYrELjmGy0oOXJcdxX_EirKVkBaOW1FPf_m2iMZLxsLAhd9S2Afj8ICCnVULyuPCNxfsED-cqOdgzrIBzyHfq6jx9CclvK_Bo-uMML5_OymsvyLnFNCXplPbGx9pG2qjzBFp_K-zEnHlgRDxKUIkfn-9VxPYErQIFG7N4_lvJ_XN8XNiec6OW-WOkEpRaTiyfqzHYsoZy057c7D4gznr98Yl-NrFAVKT_Q"
       }
     }
   }
