@@ -1,0 +1,113 @@
+---
+id: jwts
+title: JWTs
+---
+
+In the [Getting Started](/docs/api/getting-started#interpretting-the-results) guide we have already encountered a JSON Web Token (JWT).
+The response of our query had a field `jwt` with as its value a long and odd looking string:
+
+```
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGFpbSI6eyJwb2ludCI6eyJsb2NhdGlvbiI6eyJsYXRpdHVkZSI6NTIuOTUxOSwibG9uZ2l0dWRlIjotMS4xODQxfSwicmFkaXVzIjoxMDB9fSwicHJvb2YiOiJHTlNTIiwiaWF0IjoxNTk1ODQ2Mjc2fQ.Ko1otS6zZpZ1JpYymZpGXM22v7GQW0wqcU4cum_Yxb0xrbM2UGHCIwpKEvkOgA-ITEjj65AgLfs8AmNJJbUFMzVZmaATvVoy_wW2JMUn2oHcBstzc5wMUYrELjmGy0oOXJcdxX_EirKVkBaOW1FPf_m2iMZLxsLAhd9S2Afj8ICCnVULyuPCNxfsED-cqOdgzrIBzyHfq6jx9CclvK_Bo-uMML5_OymsvyLnFNCXplPbGx9pG2qjzBFp_K-zEnHlgRDxKUIkfn-9VxPYErQIFG7N4_lvJ_XN8XNiec6OW-WOkEpRaTiyfqzHYsoZy057c7D4gznr98Yl-NrFAVKT_Q
+```
+
+## Why
+
+The JSON Web Token (JWT) contains the claim asserted in the request to the ClaimR API, including a cryptographical signature.
+A JWT allows everyone to read the content of this token and verify that it has been created by ClaimR by looking at the cryptographic signature.
+
+These JWTs can be used when the request to ClaimR is made on an untrusted device which still needs to prove its verified location to another device.
+Let's take a mobile phone of an end-user as the untrusted device.
+The mobile phone makes a request to ClaimR and stores the returned JWT.
+Later, the mobile phone can send the JWT to your backend service, which reads and validates the JWT and can now be certain that the phone in fact got its location verified by ClaimR.
+
+## Verifying JWTs
+
+Implementing cryptographic functions yourself is discouraged, as they are often tricky to implement and small bugs can easily compromise the security of your application.
+Luckily there's wide support for JWTs using third-party open-source libraries.
+[jwt.io](https://jwt.io/#libraries-io) has compiled an extensive list covering most popular programming languages.
+When selecting a library, ensure that it at least supports `RS256`, which should be the case for most libraries.
+
+After the JWT is verified, inspect the content and apply your business logic to validate that the content matches with what you expected to find.
+
+### JavaScript using `jsonwebtoken`
+
+Here we will showcase how to verify a ClaimR signed JWT using the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) library, which is created and maintained by [Auth0](https://auth0.com/).
+To install the dependency run:
+
+```bash
+npm install jsonwebtoken
+```
+
+Or when using Yarn:
+
+```bash
+yarn add jsonwebtoken
+```
+
+Then download the ClaimR public key from [here](/keys/public.pem) and save it as `public.pem` in your source code directory. Now we can verify the token using the following code.
+
+```javascript
+const { verify } = require('jsonwebtoken')
+const { readFileSync } = require('fs')
+
+const claimrPublicKey = readFileSync('public.pem')
+const jwt =
+  'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGFpbSI6eyJwb2ludCI6eyJsb2NhdGlvbiI6eyJsYXRpdHVkZSI6NTIuOTUxOSwibG9uZ2l0dWRlIjotMS4xODQxfSwicmFkaXVzIjoxMDB9fSwicHJvb2YiOiJHTlNTIiwiaWF0IjoxNTk1ODQ2Mjc2fQ.Ko1otS6zZpZ1JpYymZpGXM22v7GQW0wqcU4cum_Yxb0xrbM2UGHCIwpKEvkOgA-ITEjj65AgLfs8AmNJJbUFMzVZmaATvVoy_wW2JMUn2oHcBstzc5wMUYrELjmGy0oOXJcdxX_EirKVkBaOW1FPf_m2iMZLxsLAhd9S2Afj8ICCnVULyuPCNxfsED-cqOdgzrIBzyHfq6jx9CclvK_Bo-uMML5_OymsvyLnFNCXplPbGx9pG2qjzBFp_K-zEnHlgRDxKUIkfn-9VxPYErQIFG7N4_lvJ_XN8XNiec6OW-WOkEpRaTiyfqzHYsoZy057c7D4gznr98Yl-NrFAVKT_Q'
+
+verify(jwt, claimrPublicKey, { algorithms: ['RS256'] })
+// {
+//   claim: { point: { location: { latitude: 52.9519, longitude: -1.1841 }, radius: 100, radius: 100 } },
+//   proof: 'GNSS',
+//   iat: 1595846276
+// }
+```
+
+Note that we explicitely mention the JWT algorithm we expect, namely `RS256`.
+Ommitting this makes your implementation vulnarable to [security issues](https://auth0.com/blog/critical-vulnerabilities-in-json-web-token-libraries/).
+If our JWT would be tampered with, then verify would throw a `JsonWebTokenError`.
+
+### TypeScript using `jsonwebtoken`
+
+Verify similar to the [JavaScript variant](#javascript-using-jsonwebtoken), we merely need to change the imports and add the `@types/jsonwebtoken` dependency to get type hinting.
+
+```typescript {1,2}
+import { verify } from 'jsonwebtoken'
+import { readFileSync } from 'fs'
+
+const claimrPublicKey = readFileSync('public.pem')
+const jwt =
+  'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGFpbSI6eyJwb2ludCI6eyJsb2NhdGlvbiI6eyJsYXRpdHVkZSI6NTIuOTUxOSwibG9uZ2l0dWRlIjotMS4xODQxfSwicmFkaXVzIjoxMDB9fSwicHJvb2YiOiJHTlNTIiwiaWF0IjoxNTk1ODQ2Mjc2fQ.Ko1otS6zZpZ1JpYymZpGXM22v7GQW0wqcU4cum_Yxb0xrbM2UGHCIwpKEvkOgA-ITEjj65AgLfs8AmNJJbUFMzVZmaATvVoy_wW2JMUn2oHcBstzc5wMUYrELjmGy0oOXJcdxX_EirKVkBaOW1FPf_m2iMZLxsLAhd9S2Afj8ICCnVULyuPCNxfsED-cqOdgzrIBzyHfq6jx9CclvK_Bo-uMML5_OymsvyLnFNCXplPbGx9pG2qjzBFp_K-zEnHlgRDxKUIkfn-9VxPYErQIFG7N4_lvJ_XN8XNiec6OW-WOkEpRaTiyfqzHYsoZy057c7D4gznr98Yl-NrFAVKT_Q'
+
+verify(jwt, claimrPublicKey, { algorithms: ['RS256'] })
+// {
+//   claim: { point: { location: { latitude: 52.9519, longitude: -1.1841 }, radius: 100, radius: 100 } },
+//   proof: 'GNSS',
+//   iat: 1595846276
+// }
+```
+
+## The Subject Field `sub`
+
+The JWT standard includes the subject (`sub`) field.
+When making a request against the ClaimR API the user can optionally supply the value of this field.
+This can be used to add a unique identifier to the request, which allows you to later detect replay attacks.
+
+What value to use for the subject field depends on the use-case.
+One option would be to take something identifying the user, when validating the token later you can prevent the user from using tokens created by another user.
+
+Another method could be to generate a random subject value in your trusted environment for every request.
+Together with this random value some context could be stored, e.g. the user who will attempt to verify their location, the location they are expected to be at, and so on.
+Then the user received this random value and sets it as the subject.
+When validating the token you retrieve the expected context based on the subject of the token, which can then be used when verifying the content of the token.
+
+## Technical Details
+
+ClaimR uses a combination of RSA - specifically `RSASSA-PKCS1-v1_5` - with SHA-256 to secure our JWTs.
+This combination is part of the IETF standard [RFC 7519](https://tools.ietf.org/html/rfc7519), which described the JWT specification and refers to this combination as `RS256`.
+Support of `RS256` is not mandatory by this standard, however it is still widely supported as the standard recommends supporting this.
+
+We use `RS256` because it is secure and the most widely supported asymmetric signature algorithm.
+Additionally, longer hash functions, e.g. SHA-512, would increase the length of the generated JWTs without significantly improving the security as SHA-256 is battle-tested to be resistent against attacks.
+
+Always make sure to besides checking the validity of the JWT to also thoroughly check its contents.
+For example, the "issued at" (`iat`) field
