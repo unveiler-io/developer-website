@@ -28,6 +28,11 @@ module.exports = {
         },
       ],
     },
+    algolia: {
+      apiKey: '506c2a603210897672a1348fb8df8c08',
+      indexName: 'claimr',
+      searchParameters: {},
+    },
     footer: {
       style: 'dark',
       links: [
