@@ -49,7 +49,7 @@ module.exports = {
             },
             {
               label: 'React Native Client',
-              to: 'docs/clients/react-native',
+              to: 'docs/react-native/getting-started',
             },
           ],
         },
