@@ -18,31 +18,6 @@ If you're using Yarn, run:
 yarn add @claimr/react-native-client
 ```
 
-## Linking Android
-
-Add the `GnssLoggerPackage` to the packages of your React application.
-
-```java {2,13}
-// Add the import
-import tools.claimr.reactnativeclient.GnssLoggerPackage;
-
-public class MainApplication extends Application implements ReactApplication {
-
-// ...
-        protected List<ReactPackage> getPackages() {
-          List<ReactPackage> packages = new PackageList(this).getPackages();
-
-          // ...
-
-          // Link the GnssLoggerPackage
-          packages.add(new GnssLoggerPackage());
-
-          return packages;
-        }
-// ...
-}
-```
-
 ## Create a `ClaimrClient`
 
 Next, create a `ClaimrClient` instance. For this you need your own API key, which you can get at the [ClaimR Dashboard][claimr-dashboard].
