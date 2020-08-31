@@ -10,22 +10,22 @@ Contributions of all sorts are welcome! Every improvement is valued, even those 
 
 ### Installation
 
-```
-$ yarn
+```bash
+yarn
 ```
 
 ### Local Development
 
-```
-$ yarn start
+```bash
+yarn start
 ```
 
 This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
 
 ### Build
 
-```
-$ yarn build
+```bash
+yarn build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
