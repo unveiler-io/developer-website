@@ -5,7 +5,7 @@ title: Getting Started
 
 ## Installation
 
-First start by adding the React Native client as a dependency to your React Native project.
+First start by adding [ClaimR's React Native client](https://www.npmjs.com/package/@claimr/react-native-client) as a dependency to your React Native project.
 If you're using NPM, then run:
 
 ```bash
