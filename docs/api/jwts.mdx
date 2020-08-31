@@ -3,8 +3,8 @@ id: jwts
 title: JWTs
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
 
 In the [Getting Started](/docs/api/getting-started#interpretting-the-results) guide we have already encountered a JSON Web Token (JWT).
 The response of our query had a field `jwt` with as its value a long and odd looking string:
@@ -83,6 +83,7 @@ yarn add -D @types/jsonwebtoken
 </Tabs>
 
 ### Verify the Token
+
 <Tabs
   groupId="programming-language"
   defaultValue="ts"
@@ -93,6 +94,7 @@ yarn add -D @types/jsonwebtoken
 >
 <TabItem value="js">
 
+<!-- prettier-ignore -->
 ```javascript
 const { verify } = require('jsonwebtoken')
 const { readFileSync } = require('fs')
@@ -113,12 +115,12 @@ Make sure to explicitely specify the expected algorithm as `RS256`.
 Not doing so results in a security vulnerability, as the default behaviour is to infer the algorithm from the token.
 :::
 
-
 If our JWT would be tampered with, then verify would throw a `JsonWebTokenError` instead of returning the content of the JWT.
 
 </TabItem>
 <TabItem value="ts">
 
+<!-- prettier-ignore -->
 ```typescript
 import { verify } from 'jsonwebtoken'
 import { readFileSync } from 'fs'
@@ -138,7 +140,6 @@ verify(jwt, claimrPublicKey, { algorithms: ['RS256'] })
 Make sure to explicitely specify the expected algorithm as `RS256`.
 Not doing so results in a security vulnerability, as the default behaviour is to infer the algorithm from the token.
 :::
-
 
 If our JWT would be tampered with, then verify would throw a `JsonWebTokenError` instead of returning the content of the JWT.
 
