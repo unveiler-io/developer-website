@@ -121,12 +121,12 @@ module.exports = {
           homePageId: 'overview',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/claimr/docs/edit/master/website/',
+          editUrl: 'https://github.com/claimr/docs/edit/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: 'https://github.com/claimr/docs/edit/master/website/blog/',
+          editUrl: 'https://github.com/claimr/docs/edit/main/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
