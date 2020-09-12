@@ -10,7 +10,7 @@ module.exports = {
   projectName: 'docs', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'ClaimR Documentation',
+      title: 'ClaimR',
       logo: {
         alt: 'ClaimR Logo',
         src: 'img/icon.svg',
