@@ -77,7 +77,7 @@ const Home = () => {
       title={``} // Set this to prefix the title
       description="Documentation of ClaimR, providing verified locations of your user by analysing raw GPS measurements data."
     >
-      <header className={clsx('hero')}>
+      <header className={'hero'}>
         <div className="container">
           <div className="row">
             <div className="col col--5">
@@ -85,14 +85,18 @@ const Home = () => {
               <p className="hero__subtitle">
                 15 lines of code is all it takes to get a reliable location from your user.
               </p>
-              <div className={styles.buttons}>
-                <Link
-                  className={clsx('button button--primary button--lg', styles.getStarted)}
-                  to={useBaseUrl('docs/')}
-                >
-                  Get Started
-                </Link>
-              </div>
+              <Link
+                className={clsx('button button--secondary button--lg', styles.getStarted)}
+                to={useBaseUrl('docs/')}
+              >
+                Learn More
+              </Link>
+              <Link
+                className={clsx('button button--primary button--lg', styles.getStarted)}
+                to={useBaseUrl('docs/')}
+              >
+                Get Started
+              </Link>
             </div>
             <div className="col col--7">
               <CodeSnippet
