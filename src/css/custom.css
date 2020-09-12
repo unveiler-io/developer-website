@@ -7,14 +7,31 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
-  --ifm-code-font-size: 95%;
+  --custom-primary-darkest: #10633e;
+  --custom-primary-darker: #1c8656;
+  --custom-primary-dark: #38bc81;
+  --custom-primary: #24b47e;
+  --custom-primary-light: #65d9a5;
+  --custom-primary-lighter: #9fe7c7;
+  --custom-primary-lightest: #c5f1dd;
+  --custom-background-color: #fdfdfd;
+  --custom-content-color: #1f1f1f;
+
+  /* Globals */
+  --ifm-col-spacing-vertical: 0.5rem;
+
+  /* Primary */
+  --ifm-color-primary-darkest: var(--custom-primary-darkest);
+  --ifm-color-primary-darker: var(--custom-primary-darker);
+  --ifm-color-primary-dark: var(--custom-primary-dark);
+  --ifm-color-primary: var(--custom-primary);
+  --ifm-color-primary-light: var(--custom-primary-light);
+  --ifm-color-primary-lighter: var(--custom-primary-lighter);
+  --ifm-color-primary-lightest: var(--custom-primary-lightest);
+
+  /* Hero */
+  --ifm-hero-background-color: var(--custom-background-color);
+  --ifm-hero-text-color: var(--custom-content-color);
 }
 
 .docusaurus-highlight-code-line {
@@ -22,4 +39,11 @@
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+@media screen and (max-width: 996px) {
+  .row .col {
+    padding-top: var(--ifm-col-spacing-vertical);
+    padding-bottom: var(--ifm-col-spacing-vertical);
+  }
 }
