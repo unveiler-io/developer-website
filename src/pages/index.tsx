@@ -77,7 +77,7 @@ const Home = () => {
       title={``} // Set this to prefix the title
       description="Documentation of ClaimR, providing verified locations of your user by analysing raw GPS measurements data."
     >
-      <header className={clsx('hero hero--primary')}>
+      <header className={clsx('hero')}>
         <div className="container">
           <div className="row">
             <div className="col col--5">
@@ -87,7 +87,7 @@ const Home = () => {
               </p>
               <div className={styles.buttons}>
                 <Link
-                  className={clsx('button button--outline button--secondary button--lg', styles.getStarted)}
+                  className={clsx('button button--primary button--lg', styles.getStarted)}
                   to={useBaseUrl('docs/')}
                 >
                   Get Started
