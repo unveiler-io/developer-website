@@ -8,7 +8,9 @@ import useThemeContext from '@theme/hooks/useThemeContext'
 import Highlight, { defaultProps, Language } from 'prism-react-renderer'
 import defaultTheme from 'prism-react-renderer/themes/palenight'
 
-const CodeSnippet = ({ language, code }: { language: Language; code: string }) => {
+type Theme = 'dark' | 'light'
+
+const CodeSnippet = ({ language, code, theme }: { language: Language; code: string; theme?: Theme }) => {
   const {
     siteConfig: {
       themeConfig: { prism = {} },
@@ -27,9 +29,15 @@ const CodeSnippet = ({ language, code }: { language: Language; code: string }) =
     setMounted(true)
   }, [])
 
-  const { isDarkTheme } = useThemeContext()
+  // Decide whether to render the light or dark theme
+  const themeContext = useThemeContext()
+  const isDarkTheme = theme === 'dark' || (theme === undefined && themeContext.isDarkTheme)
+
+  // Define the themes to be used in light and dark mode
   const lightModeTheme = prism.theme || defaultTheme
   const darkModeTheme = prism.darkTheme || lightModeTheme
+
+  // Pick the theme based on whether to render in dark or light mode
   const prismTheme = isDarkTheme ? darkModeTheme : lightModeTheme
 
   return (
