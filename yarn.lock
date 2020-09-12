@@ -1228,6 +1228,11 @@
     unist-util-visit "^2.0.2"
     url-loader "^4.1.0"
 
+"@docusaurus/module-type-aliases@^2.0.0-alpha.64":
+  version "2.0.0-alpha.64"
+  resolved "https://registry.yarnpkg.com/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.0-alpha.64.tgz#ccc6dcf4cf3306d21eb32271fbaf8a714a1ab963"
+  integrity sha512-R+urxGabqB4j10jsfEV6QiC/0RZD2IuNUoL9gYzxpq1SMuIk0W+Nz0q9lzIXAHpUnmGlnt00YSe6QdaQusMUnQ==
+
 "@docusaurus/plugin-content-blog@2.0.0-alpha.64":
   version "2.0.0-alpha.64"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-content-blog/-/plugin-content-blog-2.0.0-alpha.64.tgz#58242a77cc1258b39cbaf9d540aad3c963f7b7db"
@@ -1782,7 +1787,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
+"@types/react@*", "@types/react@^16.9.49":
   version "16.9.49"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.49.tgz#09db021cf8089aba0cdb12a49f8021a69cce4872"
   integrity sha512-DtLFjSj0OYAdVLBbyjhuV9CdGVHCkHn2R+xr3XkBvK2rS1Y1tkc14XSGjYgm5Fjjr90AxH9tiSzc1pCFMGO06g==
