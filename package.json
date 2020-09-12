@@ -30,6 +30,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.0.0-alpha.64",
     "@types/react": "^16.9.49",
+    "@types/react-router-dom": "^5.1.5",
     "husky": "^4.3.0",
     "lint-staged": "^10.3.0",
     "prettier": "^2.1.1",
