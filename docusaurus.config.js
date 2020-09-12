@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'ClaimR Documentation',
-  tagline: "The easy way to verify your user's location. Anywhere. Anytime.",
+  title: 'ClaimR',
+  tagline: "The simplest way to verify your user's location.",
   url: 'https://docs.claimr.tools',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
