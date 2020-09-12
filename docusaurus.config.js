@@ -38,6 +38,10 @@ module.exports = {
       indexName: 'claimr',
       searchParameters: {},
     },
+    prism: {
+      theme: require('prism-react-renderer/themes/github'),
+      darkTheme: require('prism-react-renderer/themes/dracula'),
+    },
     footer: {
       style: 'dark',
       links: [
