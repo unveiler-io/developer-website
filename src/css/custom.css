@@ -34,6 +34,7 @@
   --ifm-hero-text-color: var(--custom-content-color);
 }
 
+/* Docusaurus code highlighting */
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
@@ -41,9 +42,33 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
+/* Add and overwrite for responsive behaviour on small screens */
 @media screen and (max-width: 996px) {
   .row .col {
     padding-top: var(--ifm-col-spacing-vertical);
     padding-bottom: var(--ifm-col-spacing-vertical);
   }
+}
+
+/* Add and overwrite for responsive behaviour on very screens */
+@media screen and (max-width: 410px) {
+  .hero .button--lg {
+    --ifm-button-size-multiplier: 1.18;
+  }
+}
+
+/* Hero Buttons */
+.hero .button {
+  margin: 0 1em 1em 0;
+}
+
+.hero .button--secondary {
+  color: black; /* Color the secondary hero button, as to ensure that the text remains readable against light backgrounds. */
+  border-color: black;
+  background-color: var(--ifm-hero-background-color);
+}
+
+.hero .button--secondary:hover {
+  background-color: var(--custom-background-color);
+  border-color: rgba(0, 0,0, 0);
 }
