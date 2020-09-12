@@ -4,7 +4,9 @@ import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useBaseUrl from '@docusaurus/useBaseUrl'
+
 import styles from './styles.module.css'
+import CodeSnippet from '../components/CodeSnippet'
 
 const features = [
   {
@@ -75,17 +77,48 @@ const Home = () => {
       title={``} // Set this to prefix the title
       description="Documentation of ClaimR, providing verified locations of your user by analysing raw GPS measurements data."
     >
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <header className={clsx('hero hero--primary')}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx('button button--outline button--secondary button--lg', styles.getStarted)}
-              to={useBaseUrl('docs/')}
-            >
-              Get Started
-            </Link>
+          <div className="row">
+            <div className="col col--5">
+              <h1>{siteConfig.tagline}</h1>
+              <p className="hero__subtitle">
+                15 lines of code is all it takes to get a reliable location from your user.
+              </p>
+              <div className={styles.buttons}>
+                <Link
+                  className={clsx('button button--outline button--secondary button--lg', styles.getStarted)}
+                  to={useBaseUrl('docs/')}
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+            <div className="col col--7">
+              <CodeSnippet
+                language={'tsx'}
+                theme={'dark'}
+                code={`
+import { ClaimrClient, useLazyVerifiedLocation } from '@claimr/react-native-client'
+import { Text, Button } from 'react-native'
+
+const client = new ClaimrClient({ apiKey: 'YOUR_API_KEY' })
+
+const MyApp = () => {
+  const { claim, submit } = useLazyVerifiedLocation({ client })
+
+  return <>
+      {submit && <Button onPress={submit} title={'Submit'} />}
+      {claim && (
+        <Text>
+          {claim.location.latitude}, {claim.location.longitude}
+        </Text>
+      )}
+  </>
+}
+                `.trim()}
+              />
+            </div>
           </div>
         </div>
       </header>
