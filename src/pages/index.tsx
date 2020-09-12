@@ -8,7 +8,7 @@ import styles from './styles.module.css'
 
 const features = [
   {
-    title: <>Safe</>,
+    title: 'Safe',
     imageUrl: 'img/undraw_security.svg',
     description: (
       <>
@@ -18,7 +18,7 @@ const features = [
     link: 'docs/',
   },
   {
-    title: <>Easy to Adopt</>,
+    title: 'Easy to Adopt',
     imageUrl: 'img/undraw_mobile_development.svg',
     description: (
       <>
@@ -29,7 +29,7 @@ const features = [
     link: 'docs/react-native/getting-started',
   },
   {
-    title: <>Same Permissions. More Info</>,
+    title: 'Same Permissions. More Info',
     imageUrl: 'img/undraw_my_location.svg',
     description: (
       <>
@@ -41,7 +41,17 @@ const features = [
   },
 ]
 
-const Feature = ({ imageUrl, title, description, link }) => {
+const Feature = ({
+  imageUrl,
+  title,
+  description,
+  link,
+}: {
+  imageUrl: string
+  title: string
+  description: JSX.Element
+  link?: string
+}) => {
   const imgUrl = useBaseUrl(imageUrl)
   return (
     <div className={clsx('col col--4', styles.feature)}>
