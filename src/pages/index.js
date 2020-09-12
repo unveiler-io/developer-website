@@ -41,7 +41,7 @@ const features = [
   },
 ]
 
-function Feature({ imageUrl, title, description, link }) {
+const Feature = ({ imageUrl, title, description, link }) => {
   const imgUrl = useBaseUrl(imageUrl)
   return (
     <div className={clsx('col col--4', styles.feature)}>
@@ -57,9 +57,9 @@ function Feature({ imageUrl, title, description, link }) {
   )
 }
 
-function Home() {
-  const context = useDocusaurusContext()
-  const { siteConfig = {} } = context
+const Home = () => {
+  const { siteConfig = {} } = useDocusaurusContext()
+
   return (
     <Layout
       title={``} // Set this to prefix the title
