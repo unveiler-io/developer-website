@@ -1,6 +1,7 @@
 ---
 id: overview
 title: Overview
+slug: /
 ---
 
 Locations reported by users or machines can be manipulated in various ways, including modifying the software running on a device (software spoofing) and tampering with GNSS signals (hardware spoofing).
