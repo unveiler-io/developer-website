@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   title: 'ClaimR',
   tagline: "The simplest way to verify your user's location.",
-  url: 'https://docs.claimr.tools',
+  url: 'https://claimr.tools',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'ClaimR',
@@ -103,10 +103,6 @@ module.exports = {
             //   label: 'Blog',
             //   to: 'blog',
             // },
-            {
-              label: 'Website',
-              href: 'https://claimr.tools',
-            },
             {
               label: 'Dashboard',
               href: 'https://dashboard.claimr.tools',
