@@ -1,0 +1,10 @@
+.codeSnippet {
+  font-size: 10pt;
+  text-align: left;
+}
+
+@media (max-width: 997px) {
+  .codeSnippet {
+    padding: 8px;
+  }
+}

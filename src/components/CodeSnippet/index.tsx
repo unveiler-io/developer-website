@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 
 import styles from './styles.module.css'
+
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import useThemeContext from '@theme/hooks/useThemeContext'
 
-import Highlight, { defaultProps } from 'prism-react-renderer'
+import Highlight, { defaultProps, Language } from 'prism-react-renderer'
+import defaultTheme from 'prism-react-renderer/themes/palenight'
 
-import monokai from '@site/src/plugins/prism_themes/monokai'
-
-function CodeSnippet(props) {
+const CodeSnippet = ({ language, code }: { language: Language; code: string }) => {
   const {
     siteConfig: {
       themeConfig: { prism = {} },
@@ -28,26 +28,28 @@ function CodeSnippet(props) {
   }, [])
 
   const { isDarkTheme } = useThemeContext()
-  const lightModeTheme = prism.theme || monokai
+  const lightModeTheme = prism.theme || defaultTheme
   const darkModeTheme = prism.darkTheme || lightModeTheme
   const prismTheme = isDarkTheme ? darkModeTheme : lightModeTheme
 
-  const { lang = 'yaml', snippet } = props
-
   return (
-    <Highlight {...defaultProps} key={mounted} theme={prismTheme} code={snippet} language={lang}>
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={`${className} ${styles.codeSnippet}`} style={style}>
-          {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} />
+    <div key={mounted.toString()}>
+      <Highlight {...defaultProps} theme={prismTheme} code={code} language={language}>
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <>
+            <pre className={`${className} ${styles.codeSnippet}`} style={style}>
+              {tokens.map((line, i) => (
+                <div {...getLineProps({ line, key: i })}>
+                  {line.map((token, key) => (
+                    <span {...getTokenProps({ token, key })} />
+                  ))}
+                </div>
               ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
+            </pre>
+          </>
+        )}
+      </Highlight>
+    </div>
   )
 }
 
