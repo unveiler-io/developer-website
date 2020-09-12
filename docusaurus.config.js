@@ -106,6 +106,10 @@ module.exports = {
               label: 'Status',
               href: 'https://status.claimr.tools',
             },
+            {
+              label: 'API',
+              href: 'https://api.claimr.tools',
+            },
           ],
         },
       ],
