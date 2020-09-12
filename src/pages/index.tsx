@@ -33,8 +33,8 @@ const features = [
     imageUrl: 'img/undraw_my_location.svg',
     description: (
       <>
-        We require the same permissions on Android as needed for accessing the user's location. A lot of value
-        is left on the table by not using the raw GPS measurements you already requested access to.
+        We require the same Android permissions as needed for accessing the user's location. A lot of value is
+        left on the table by not using the raw GPS measurements you already have access to.
       </>
     ),
     link: 'docs/react-native/requirements',
