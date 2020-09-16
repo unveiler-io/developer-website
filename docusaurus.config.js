@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   title: 'ClaimR Documentation',
   tagline: "The easy way to verify your user's location. Anywhere. Anytime.",
@@ -27,6 +29,9 @@ module.exports = {
           position: 'right',
         },
       ],
+    },
+    goatcounter: {
+      code: 'claimr-docs',
     },
     algolia: {
       apiKey: '506c2a603210897672a1348fb8df8c08',
@@ -135,4 +140,5 @@ module.exports = {
       },
     ],
   ],
+  plugins: [path.resolve(__dirname, 'plugins', 'goatcounter')],
 }
