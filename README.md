@@ -1,6 +1,6 @@
-# ![](static/img/icon.svg) ClaimR Documentation
+# ![](static/img/icon.svg) ClaimR Developer Website
 
-This repository hosts the documentation for all ClaimR products.
+This repository hosts the developer website for [ClaimR](https://claimr.tools). It introduces developers to what ClaimR offers, how to get started, documents all available features and hosts our blog.
 
 ## Contributing
 
