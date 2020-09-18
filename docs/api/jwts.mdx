@@ -48,6 +48,7 @@ Download the ClaimR public key from [here](/keys/public.pem) and save it as `pub
 >
 <TabItem value="js">
 
+
 Here we will showcase how to verify a ClaimR signed JWT using the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) library, which is created and maintained by [Auth0](https://auth0.com/).
 To install the dependency run:
 
@@ -63,6 +64,7 @@ yarn add jsonwebtoken
 
 </TabItem>
 <TabItem value="ts">
+
 
 Here we will showcase how to verify a ClaimR signed JWT using the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) library, which is created and maintained by [Auth0](https://auth0.com/).
 To install it as a dependency together with its types:
@@ -82,6 +84,7 @@ yarn add -D @types/jsonwebtoken
 </TabItem>
 </Tabs>
 
+
 ### Verify the Token
 
 <Tabs
@@ -93,6 +96,7 @@ yarn add -D @types/jsonwebtoken
   ]}
 >
 <TabItem value="js">
+
 
 <!-- prettier-ignore -->
 ```javascript
@@ -120,6 +124,7 @@ If our JWT would be tampered with, then verify would throw a `JsonWebTokenError`
 </TabItem>
 <TabItem value="ts">
 
+
 <!-- prettier-ignore -->
 ```typescript
 import { verify } from 'jsonwebtoken'
@@ -145,6 +150,7 @@ If our JWT would be tampered with, then verify would throw a `JsonWebTokenError`
 
 </TabItem>
 </Tabs>
+
 
 ## The Subject Field `sub`
 
