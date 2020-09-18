@@ -23,5 +23,6 @@ module.exports = {
         'react-native/api',
       ],
     },
+    'pricing',
   ],
 }
