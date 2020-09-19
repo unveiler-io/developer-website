@@ -8,7 +8,8 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "format": "prettier --write .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "serve": "npx serve build"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.64",
