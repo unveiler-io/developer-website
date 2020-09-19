@@ -1,5 +1,7 @@
 const path = require('path')
 
+const copyright = `Copyright © ${new Date().getFullYear()}, ClaimR`
+
 module.exports = {
   title: 'ClaimR',
   tagline: "The simplest way to verify your user's location.",
@@ -22,7 +24,7 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        // {to: 'blog', label: 'Blog', position: 'left'},
+        { to: 'blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/ClaimR',
           label: 'GitHub',
@@ -65,6 +67,10 @@ module.exports = {
         {
           title: 'Social & Contact',
           items: [
+            {
+              label: 'Blog',
+              to: 'blog',
+            },
             {
               label: 'GitHub',
               href: 'https://github.com/ClaimR',
@@ -118,7 +124,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()}, ClaimR`,
+      copyright,
     },
   },
   presets: [
