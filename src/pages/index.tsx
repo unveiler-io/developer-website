@@ -93,7 +93,7 @@ const Home = () => {
               </Link>
               <Link
                 className={clsx('button button--primary button--lg', styles.getStarted)}
-                to={useBaseUrl('docs/')}
+                to={useBaseUrl('docs/react-native/getting-started')}
               >
                 Get Started
               </Link>
