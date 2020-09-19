@@ -140,7 +140,7 @@ module.exports = {
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/claimr/docs/edit/main/blog/',
+          editUrl: 'https://github.com/claimr/docs/edit/main/',
           feedOptions: {
             type: 'all',
             copyright,
