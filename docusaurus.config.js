@@ -7,7 +7,7 @@ module.exports = {
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'ClaimR',
-  projectName: 'docs', // Usually your repo name.
+  projectName: 'developer-website',
   themeConfig: {
     navbar: {
       title: 'ClaimR',
