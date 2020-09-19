@@ -111,14 +111,14 @@ const client = new ClaimrClient({ apiKey: 'YOUR_API_KEY' })
 const MyApp = () => {
   const { claim, submit } = useLazyVerifiedLocation({ client })
 
-  return <>
+  return (<>
       {submit && <Button onPress={submit} title={'Submit'} />}
       {claim && (
         <Text>
           {claim.location.latitude}, {claim.location.longitude}
         </Text>
       )}
-  </>
+  </>)
 }
                 `.trim()}
               />
