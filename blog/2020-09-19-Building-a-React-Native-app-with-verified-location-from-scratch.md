@@ -15,6 +15,8 @@ You don't need prior experience with React or React Native in order to be able t
 
 <!--truncate-->
 
+The resulting source code of the app we will build here can be [found on Github](https://github.com/ClaimR/blog-builing-a-rn-app).
+
 ## Setup Development Environment
 
 If you already have developed React Native apps before on Android on your development workstation, then you should be able to skip this step.
