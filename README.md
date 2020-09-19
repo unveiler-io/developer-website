@@ -11,7 +11,7 @@ Contributions of all sorts are welcome! Every improvement is valued, even those 
 ### Installation
 
 ```bash
-yarn
+yarn install --frozen-lockfile
 ```
 
 ### Local Development
