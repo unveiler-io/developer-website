@@ -296,3 +296,6 @@ $RECYCLE.BIN/
 # Ignore all of Visual Studio Code
 .vscode/
 
+# Production build artifacts
+build/
+
