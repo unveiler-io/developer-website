@@ -135,6 +135,11 @@ module.exports = {
         blog: {
           showReadingTime: true,
           editUrl: 'https://github.com/claimr/docs/edit/main/blog/',
+          feedOptions: {
+            type: 'all',
+            copyright,
+            language: 'en',
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
