@@ -62,6 +62,10 @@ module.exports = {
               label: 'React Native Client',
               to: 'docs/react-native/getting-started',
             },
+            {
+              label: 'Pricing',
+              to: 'docs/pricing',
+            },
           ],
         },
         {
