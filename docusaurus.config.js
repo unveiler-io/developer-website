@@ -99,10 +99,10 @@ module.exports = {
         {
           title: 'More',
           items: [
-            // {
-            //   label: 'Blog',
-            //   to: 'blog',
-            // },
+            {
+              label: 'Website',
+              href: 'https://claimr.tools',
+            },
             {
               label: 'Dashboard',
               href: 'https://dashboard.claimr.tools',
