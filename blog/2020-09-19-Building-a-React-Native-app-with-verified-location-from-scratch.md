@@ -15,7 +15,7 @@ You don't need prior experience with React or React Native in order to be able t
 
 <!--truncate-->
 
-The resulting source code of the app we will build here can be [found on Github](https://github.com/ClaimR/blog-builing-a-rn-app).
+You can find the source code of the end result [on Github](https://github.com/ClaimR/blog-builing-a-rn-app).
 
 ## Setup Development Environment
 
