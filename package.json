@@ -1,7 +1,7 @@
 {
   "name": "claimr-documentation",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "docusaurus start",
     "build": "docusaurus build",
