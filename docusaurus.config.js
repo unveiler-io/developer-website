@@ -24,6 +24,7 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
+        { to: 'docs/pricing', label: 'Pricing', position: 'left' },
         { to: 'blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/ClaimR',
