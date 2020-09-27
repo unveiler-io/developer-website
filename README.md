@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod&style=for-the-badge)](https://gitpod.io/#https://github.com/ClaimR/developer-website)
+
 # ![](static/img/icon.svg) ClaimR Developer Website
 
 This repository hosts the developer website for [ClaimR](https://claimr.tools). It introduces developers to what ClaimR offers, how to get started, documents all available features and hosts our blog.
