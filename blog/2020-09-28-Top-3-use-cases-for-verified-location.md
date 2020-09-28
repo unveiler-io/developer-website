@@ -3,7 +3,7 @@ title: Top 3 Use Cases for Verified Location Technology
 author: Gijs Wissing
 author_title: Founder of ClaimR
 #author_url:https://github.com/gijswissing
-author_image_url: img/team/gijs.jpg
+author_image_url: /img/team/gijs.jpg
 tags: [Verified Location, Use Cases]
 description: Verified location technology is becoming readily availabe. Here we discuss three potential use-cases which  verified location.
 #image: https://i.imgur.com/mErPwqL.png
