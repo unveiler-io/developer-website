@@ -68,6 +68,10 @@ query ValidPointClaimRequest {
 }
 ```
 
+This is how your screen should like like after you entered the query and the HTTP Headers field:
+
+![Screenshot of ClaimR API Playground](/img/docs/claimr_playground_sample_query_screenshot.jpg)
+
 ### Interpretting the Results
 
 After a couple of seconds your location verification request will be resolved and the results will be shown at the right half of your screen. These will look something like this:
