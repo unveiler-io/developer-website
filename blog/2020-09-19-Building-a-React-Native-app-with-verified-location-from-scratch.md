@@ -13,8 +13,6 @@ hide_table_of_contents: false
 In this post I will show you how to create a React Native app with ClaimR's verified location technology from scratch.
 You don't need prior experience with React or React Native in order to be able to follow this guide.
 
-<!--truncate-->
-
 You can find the source code of the end result [on Github](https://github.com/ClaimR/blog-builing-a-rn-app).
 
 ## Setup Development Environment
