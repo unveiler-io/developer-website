@@ -3,7 +3,7 @@ title: Building a React Native app with verified location from scratch
 author: Adriaan Knapen
 author_title: Founder of ClaimR
 author_url: https://github.com/Addono
-author_image_url: https://aknapen.nl/img/profile.jpg
+author_image_url: img/team/adriaan.jpg
 tags: [React Native, ClaimR, Android, Development, Guide, Getting Started]
 description: In this post we walk you through how to create a React Native app with verified location from ClaimR from scratch.
 #image: https://i.imgur.com/mErPwqL.png
