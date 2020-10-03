@@ -158,5 +158,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: [path.resolve(__dirname, 'plugins', 'goatcounter')],
+  plugins: ['docusaurus-plugin-goatcounter'],
 }

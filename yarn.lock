@@ -3855,6 +3855,11 @@ dns-txt@^2.0.2:
   dependencies:
     buffer-indexof "^1.0.0"
 
+docusaurus-plugin-goatcounter@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-goatcounter/-/docusaurus-plugin-goatcounter-1.0.0.tgz#2ebc46a820ea5503f2797fd0fd11a84ec44699c9"
+  integrity sha512-66KDgJZLQpZVMTB/qXWEF3Mk+VO8MthiBrBrIYLSIetJuK4FZoaBxj3wXiP1Msrnc+h+2vtdU4euX6jj/RztsQ==
+
 dom-converter@^0.2:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/dom-converter/-/dom-converter-0.2.0.tgz#6721a9daee2e293682955b6afe416771627bb768"
