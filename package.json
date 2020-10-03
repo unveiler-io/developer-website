@@ -13,8 +13,8 @@
     "serve": "npx serve build"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.64",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.64",
+    "@docusaurus/core": "^2.0.0-alpha.65",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.65",
     "clsx": "^1.1.1",
     "prism-react-renderer": "^1.1.1",
     "react": "^16.8.4",
@@ -33,7 +33,7 @@
     ]
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^2.0.0-alpha.64",
+    "@docusaurus/module-type-aliases": "^2.0.0-alpha.65",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react": "^16.9.50",
     "@types/react-helmet": "^6.1.0",
