@@ -3,9 +3,9 @@ const path = require('path')
 const copyright = `Copyright © ${new Date().getFullYear()}, ClaimR`
 
 module.exports = {
-  title: 'ClaimR',
+  title: 'ClaimR Developers',
   tagline: "The simplest way to verify your user's location.",
-  url: 'https://claimr.tools',
+  url: 'https://developer.claimr.tools',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'ClaimR',
