@@ -3,7 +3,7 @@ id: pricing
 title: Pricing
 ---
 
-Usage of the ClaimR API is **free of charge** for development and prototype purposes for up to 250 location verification attempts per month. If your use-case demands a higher limit, then please reach out to [sales@claimr.tools](mailto:sales@claimr.tools) such that we can (temporarily) increase your limit.
+Usage of the ClaimR API is **free of charge for development and prototype purposes** for up to 250 location verification attempts per month. If developing for your use-case demands a higher limit, then please reach out to [sales@claimr.tools](mailto:sales@claimr.tools) such that we can (temporarily) increase your limit.
 
 For production usage we have a usage based tiered pricing model, which charges based on the amount of successful verified location attempts.
 
