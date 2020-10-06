@@ -12,6 +12,8 @@ hide_table_of_contents: false
 
 Technology to verify a user's location is becoming readily available. Here we discuss our top three potential use-cases made possible by the emergence of verified location technology.
 
+<!--truncate-->
+
 ## Authentication
 
 Multi-factor authentication has been become synonymous with online banking. If you have made payments using online banking on your phone or on your laptop you most likely had to use a random code that is generated on a separate device, send to your phone by SMS or found in a large lookup table. By adding in these relatively hard to fake security checks the full security system which includes your username and password is exponentially harder to breach. Some highly sensitive systems are protected with up to 4 layers of authentication.

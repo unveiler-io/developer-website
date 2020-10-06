@@ -5,7 +5,7 @@ author_title: Founder of ClaimR
 author_url: https://github.com/Addono
 author_image_url: /img/team/adriaan.jpg
 tags: [ClaimR, Use Cases]
-description: In this post we walk you through how to create a React Native app with verified location from ClaimR from scratch.
+description: In this post we will cover the impact of location fraud and how apps can integrate with ClaimR as to prevent location fraud.
 #image: https://i.imgur.com/mErPwqL.png
 hide_table_of_contents: false
 ---
@@ -13,6 +13,10 @@ hide_table_of_contents: false
 Having a device in our pocket which can pinpoint our location has become the norm in the last decade. Many apps capitalize on this feature, for example to tailor the experience to the user's location, offer them navigation instructions, or record where a certain photo is taken.
 
 In some of these cases the user can gain by manipulating their location. This makes app developers unable to use their user's location for critical applications. While less vital applications resort to accepting that some of their users are able to cheat.
+
+In this post we will cover the impact of location fraud and how apps can integrate with ClaimR as to prevent location fraud.
+
+<!--truncate-->
 
 ## A Force Even Giants Cannot Withstand
 
