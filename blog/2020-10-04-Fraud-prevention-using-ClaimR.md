@@ -20,7 +20,7 @@ In this post we will cover the impact of location fraud and how apps can integra
 
 ## A Force Even Giants Cannot Withstand
 
-Augmented reality game [Pokémon Go](https://www.pokemongo.com/) is one of those apps which suffers under a large portion of its player base is manipulating their location to get in-game benefits over regular players. The name might not be familiar for everyone, but rest ashured, with an annual revenue of \$894 million in 2019 alone [[1]][sensor-tower-pokemon-go-earnings] they have plenty of resources to fight the problem.
+Augmented reality game [Pokémon Go](https://www.pokemongo.com/) is one of those apps which suffers under a large portion of its player base is manipulating their location to get in-game benefits over regular players. The name might not be familiar for everyone, but rest ashured, with an annual revenue of $894 million in 2019 alone [[1]][sensor-tower-pokemon-go-earnings] they have plenty of resources to fight the problem.
 
 Pokémon Go rewards their players with in-game items for going to certain locations in real life. Manipulating your location is called "spoofing", it has become so common practice that there are open communities with at of writing 136 thousand users [[2][reddit-pokemon-go-spoofing]].
 
@@ -54,7 +54,7 @@ In general, for starters we recommend using the Send Directly approach combined 
 
 ## References
 
-[1] SensorTower - [Pokémon GO Has Best Year Ever in 2019, Catching Nearly \$900 Million in Player Spending][sensor-tower-pokemon-go-earnings]
+[1] SensorTower - [Pokémon GO Has Best Year Ever in 2019, Catching Nearly $900 Million in Player Spending][sensor-tower-pokemon-go-earnings]
 
 [2] Reddit - [r/pokemongospoofing: Pokémon GO Spoofing – The #1 Hub for Spoofers!][reddit-pokemon-go-spoofing]
 
