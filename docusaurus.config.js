@@ -122,9 +122,13 @@ module.exports = {
               label: 'Status',
               href: 'https://status.claimr.tools',
             },
+            // {
+            //   label: 'API',
+            //   href: 'https://api.claimr.tools',
+            // },
             {
-              label: 'API',
-              href: 'https://api.claimr.tools',
+              label: 'Privacy Policy',
+              href: 'https://claimr.tools/privacy-policy',
             },
           ],
         },
