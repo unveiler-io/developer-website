@@ -1,5 +1,3 @@
-const path = require('path')
-
 const copyright = `Copyright © ${new Date().getFullYear()}, ClaimR`
 
 module.exports = {
