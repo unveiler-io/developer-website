@@ -1,4 +1,4 @@
-const copyright = `Copyright © ${new Date().getFullYear()}, ClaimR`
+const copyright = `Copyright © ${new Date().getFullYear()}, ClaimR B.V. - KvK 81570872`
 
 module.exports = {
   title: 'ClaimR Developers',
@@ -86,6 +86,10 @@ module.exports = {
               label: 'Email',
               href: 'mailto:contact@claimr.tools',
             },
+            {
+              label: 'LinkedIn',
+              href: 'https://linkedin.com/company/ClaimR-BV',
+            },
           ],
         },
         // {
@@ -120,13 +124,13 @@ module.exports = {
               label: 'Status',
               href: 'https://status.claimr.tools',
             },
-            // {
-            //   label: 'API',
-            //   href: 'https://api.claimr.tools',
-            // },
             {
               label: 'Privacy Policy',
               href: 'https://claimr.tools/privacy-policy',
+            },
+            {
+              label: 'API',
+              href: 'https://api.claimr.tools',
             },
           ],
         },
