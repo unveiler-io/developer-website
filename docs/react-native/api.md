@@ -31,7 +31,7 @@ As it's lazy, the user needs to manually invoke it to send the request to the Cl
 This can be done by calling the `submit` function once its defined by the hook.
 
 The hook tracks its state using the following state machine:
-![State machine](/img/react-native-state-machine.png)
+![State machine](../../static/img/react-native-state-machine.png)
 
 The machine is initially in the `registeringListener` state, when it successfully registers the listener it will switch to the `listening` state.
 Once enough raw GNSS data has been collected, it will move to `ready`.

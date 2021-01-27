@@ -23,6 +23,7 @@ module.exports = {
         'react-native/api',
       ],
     },
+    'claimr-auth',
     'pricing',
   ],
 }
