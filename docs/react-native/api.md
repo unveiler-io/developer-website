@@ -3,6 +3,8 @@ id: api
 title: API
 ---
 
+On this page you can find all components part of the public interface of the `@claimr/react-native-client` package.
+
 ## `ClaimrClient`
 
 The `ClaimrClient` object maintains the connection with the API.
