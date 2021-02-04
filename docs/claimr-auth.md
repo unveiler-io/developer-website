@@ -17,4 +17,8 @@ When registering ClaimR Auth as your 2FA solution at a service, you can configur
 
 You can download ClaimR Auth for free on the [Google Play Store][claimr-auth-google-play].
 
+<div align="center">
+    <iframe src="https://www.youtube-nocookie.com/embed/kEtMKDenrYU?vq=hd1080&modestbranding=1" width="616" height="347" frameborder="0"></iframe>
+</div>
+
 [claimr-auth-google-play]: https://play.google.com/store/apps/details?id=tools.claimr.auth
