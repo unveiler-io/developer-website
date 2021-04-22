@@ -34,7 +34,7 @@ However, this approach to multi-factor authentication lacks any awareness of con
 We believe that including more context in multi-factor authentication solutions is the way forward to a more secure future.
 If access to a certain service is really critical, and you know that it only needs to be accessed from a specific location, then it is a sensible choice to use your location data as an additional layer of protection.
 With ClaimR Auth this becomes something you can do today.
-Download ClaimR Auth in the [Google Play Store](<[[claimr-auth-google-play]](https://play.google.com/store/apps/details?id=tools.claimr.auth)>) and level up the protection of your most precious accounts.
+Download ClaimR Auth in the [Google Play Store](https://play.google.com/store/apps/details?id=tools.claimr.auth) and level up the protection of your most precious accounts.
 
 ## Custom Solutions
 
