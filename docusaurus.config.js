@@ -130,7 +130,7 @@ module.exports = {
             },
             {
               label: 'API',
-              href: 'https://api.claimr.tools',
+              href: 'https://stats.uptimerobot.com/Zz3BYsM85k',
             },
           ],
         },
