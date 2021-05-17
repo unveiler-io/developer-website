@@ -40,7 +40,20 @@ repository:
 # Labels: define labels for Issues and Pull Requests
 labels:
   - name: bug
-    color: CC0000
+    color: 'CC0000'
   - name: feature
-    color: 336699
+    color: '336699'
+  - name: improvement
+    color: 'FFCC66'
+  - name: Low hanging fruit
+    description: Quick wins
+    color: '00FF99'
+
   - name: automerge
+
+  - name: dependencies
+    color: '283AFC'
+  - name: yarn
+    color: 'DC9750'
+  - name: Github Actions
+    color: '2C1E10'
