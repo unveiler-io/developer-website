@@ -31,9 +31,6 @@ module.exports = {
         },
       ],
     },
-    goatcounter: {
-      code: 'claimr-docs',
-    },
     algolia: {
       apiKey: '506c2a603210897672a1348fb8df8c08',
       indexName: 'claimr',
@@ -164,5 +161,12 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['docusaurus-plugin-goatcounter'],
+  plugins: [
+    [
+      'docusaurus-plugin-plausible',
+      {
+        domain: 'developer.claimr.tools',
+      },
+    ],
+  ],
 }
