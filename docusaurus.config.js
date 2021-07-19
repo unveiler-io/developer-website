@@ -32,8 +32,9 @@ module.exports = {
       ],
     },
     algolia: {
-      apiKey: '506c2a603210897672a1348fb8df8c08',
-      indexName: 'claimr',
+      apiKey: '032a61376505eb18dfa5b0b18726e97e',
+      indexName: 'ClaimR Developer Website',
+      appId: 'RFMSBW8V2Z',
       searchParameters: {},
     },
     prism: {
