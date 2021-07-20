@@ -2,6 +2,9 @@ name: Deploy
 
 on:
   push:
+    branches:
+      - '*'
+      - '!dependabot/*'
   pull_request_target:
 
 jobs:
