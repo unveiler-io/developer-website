@@ -5,7 +5,7 @@ module.exports = {
   tagline: "The simplest way to verify your user's location.",
   url: 'https://developer.unveiler.io',
   baseUrl: '/',
-  favicon: 'img/logo.svg',
+  favicon: 'favicon.ico',
   organizationName: 'Unveiler',
   projectName: 'developer-website',
   themeConfig: {
