@@ -3,12 +3,12 @@ id: requirements
 title: Requirements
 ---
 
-The React Native Client for ClaimR poses some requirements on the device it is running on.
+The React Native Client for Unveiler poses some requirements on the device it is running on.
 These requirements originate from software or hardware limitations of these devices, as access to raw GNSS measurements has only been introduced in recent years.
 Hence, not all devices currently in use are supported.
 This will mostly affect older devices, as newer devices tend to support raw GNSS measurements.
 
-The following requirements needs to be satisfied for a device to support the ClaimR React Native client:
+The following requirements needs to be satisfied for a device to support the Unveiler React Native client:
 
 - Android 7 (support required for all devices running Android 10 or newer)
 - [`ACCESS_FINE_LOCATION`](https://developer.android.com/reference/android/Manifest.permission#ACCESS_FINE_LOCATION) permission

@@ -6,7 +6,7 @@ image: img/claimr-auth_featured.jpg
 ---
 
 ClaimR Auth is an Android app which offers location based multi-factor authentication.
-It is build using ClaimR's [SDK for React Native](/docs/react-native/overview), using the same features as we make available to third-parties.
+It is build using Unveiler's [SDK for React Native](/docs/react-native/overview), using the same features as we make available to third-parties.
 
 ![](../static/img/claimr-auth_featured.jpg)
 

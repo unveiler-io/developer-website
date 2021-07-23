@@ -5,7 +5,7 @@ title: Getting Started
 
 ## Installation
 
-First start by adding [ClaimR's React Native client](https://www.npmjs.com/package/@claimr/react-native-client) as a dependency to your React Native project.
+First start by adding [Unveiler's React Native client](https://www.npmjs.com/package/@claimr/react-native-client) as a dependency to your React Native project.
 If you're using NPM, then run:
 
 ```bash
@@ -20,7 +20,7 @@ yarn add @claimr/react-native-client
 
 ## Create a `ClaimrClient`
 
-Next, create a `ClaimrClient` instance. For this you need your own API key, which you can get at the [ClaimR Dashboard][claimr-dashboard].
+Next, create a `ClaimrClient` instance. For this you need your own API key, which you can get at the [Unveiler Dashboard][unveiler-dashboard].
 
 ```typescript
 import { ClaimrClient } from '@claimr/react-native-client'
@@ -38,7 +38,7 @@ To circumvent hard-coding the API key, we recommend storing them outside your co
 
 The last step is to start using the `useLazyVerifiedLocation` hook.
 In the background this hook will collect GNSS data.
-Once enough data has been collected, the `submit` function will be populated, which when invoked will send recent GNSS data to the ClaimR API to verify the current location.
+Once enough data has been collected, the `submit` function will be populated, which when invoked will send recent GNSS data to the Unveiler API to verify the current location.
 After the location is verified, the results will be available in `claim` and also encoded as a JWT in `jwt`.
 
 ```tsx
@@ -63,5 +63,5 @@ const MyModule = () => {
 
 For a more elaborate useage example, see our example React Native client [here](https://github.com/ClaimR/react-native-client/blob/master/example/src/App.tsx) and explore the [API](/docs/react-native/api).
 
-[claimr-dashboard]: https://dashboard.claimr.tools
+[unveiler-dashboard]: https://dashboard.unveiler.io
 [npm-react-native-config]: https://www.npmjs.com/package/react-native-config

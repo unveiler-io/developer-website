@@ -1,16 +1,16 @@
 ---
-title: Dogfooding at ClaimR
+title: Dogfooding at Unveiler
 author: Adriaan Knapen
-author_title: Founder of ClaimR
+author_title: Founder of Unveiler
 author_url: https://github.com/Addono
 author_image_url: /img/team/adriaan.jpg
-tags: [ClaimR, ClaimR Auth, Google Play, App, Release]
-description: We are proud to announce that after a month of hard work, we have released ClaimR's first fully-fledged app, putting ClaimR's verified location technology directly in the hands of end users.
+tags: [ClaimR, ClaimR Auth, Unveiler, Google Play, App, Release]
+description: We are proud to announce that after a month of hard work, we have released Unveiler's first fully-fledged app, putting Unveiler's verified location technology directly in the hands of end users.
 image: img/claimr-auth_featured.jpg
 hide_table_of_contents: false
 ---
 
-Over the past few months we have been working hard at ClaimR to build a fully-fledged app on top of our verified location technology.
+Over the past few months we have been working hard at Unveiler to build a fully-fledged app on top of our verified location technology.
 Our primary commitment will be to develop state of the art verified location technology and a great developer experience.
 Now we took some time to build and productize an app for ourselves.
 It's available for free in the [Google Play Store](https://play.google.com/store/apps/details?id=tools.claimr.auth), so be sure to check it out!
@@ -29,7 +29,7 @@ This is core to any healthy business, and as such it makes dogfooding such an in
 
 ## Stop Testing, Start Building Value
 
-By building, productizing and maintaining an app based on ClaimR's offering, we become our own customers.
+By building, productizing and maintaining an app based on Unveiler's offering, we become our own customers.
 Ofcourse we already built plenty of small-scale example apps which demonstrated our technology in isolation.
 But building a product is so much more than getting a developer build running on your phone.
 You need to take care of distribution, marketing, long term support, maintenance, integration with your existing brand, and comply to privacy guidelines, just to name a few.

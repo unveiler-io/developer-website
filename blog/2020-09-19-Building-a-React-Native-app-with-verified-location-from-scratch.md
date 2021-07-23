@@ -1,16 +1,16 @@
 ---
 title: Building a React Native app with verified location from scratch
 author: Adriaan Knapen
-author_title: Founder of ClaimR
+author_title: Founder of Unveiler
 author_url: https://github.com/Addono
 author_image_url: /img/team/adriaan.jpg
-tags: [React Native, ClaimR, Android, Development, Guide, Getting Started]
-description: In this post we walk you through how to create a React Native app with verified location from ClaimR from scratch.
+tags: [React Native, ClaimR, Unveiler, Android, Development, Guide, Getting Started]
+description: In this post we walk you through how to create a React Native app with verified location from Unveiler from scratch.
 #image: https://i.imgur.com/mErPwqL.png
 hide_table_of_contents: false
 ---
 
-In this post I will show you how to create a React Native app with ClaimR's verified location technology from scratch.
+In this post I will show you how to create a React Native app with Unveiler's verified location technology from scratch.
 You don't need prior experience with React or React Native in order to be able to follow this guide.
 
 <!--truncate-->
@@ -28,7 +28,7 @@ Make sure to follow the instructions for "React Native CLI Quickstart" (rather t
 Let's bootstrap a React Native app, run the following command:
 
 ```bash
-npx react-native init MyClaimrApp
+npx react-native init MyUnveilerApp
 ```
 
 This will give you a bare React Native app, try to launch it on your Android device:
@@ -37,21 +37,21 @@ This will give you a bare React Native app, try to launch it on your Android dev
 yarn run android
 ```
 
-## Integrating with ClaimR
+## Integrating with Unveiler
 
-Next up we will be integrating with ClaimR by using the [ClaimR React Native client](https://www.npmjs.com/package/@claimr/react-native-client).
-This client makes it a lot easier to get started with ClaimR, as it takes care of all the GNSS specifics for you.
+Next up we will be integrating with Unveiler by using our [React Native client](https://www.npmjs.com/package/@claimr/react-native-client).
+This client makes it a lot easier to get started with Unveiler, as it takes care of all the GNSS specifics for you.
 It's completely open-source, so feel free to dig into it [here](https://github.com/ClaimR/react-native-client) if you're interested to get to know the inner workings.
 
 ### Install `@claimr/react-native-client` as a Dependency
 
-Let's start by adding ClaimR's React Native client by running the following command:
+Let's start by adding our React Native client by running the following command:
 
 ```bash
 yarn add @claimr/react-native-client
 ```
 
-### Adding the ClaimR Client
+### Adding the Unveiler Client
 
 Open `App.js` and replace its content with the following code snippet:
 
@@ -68,7 +68,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titleText}>My ClaimR App</Text>
+      <Text style={styles.titleText}>My Unveiler App</Text>
       <Text>State: {state.toLocaleUpperCase()}</Text>
       {submit && <Button onPress={submit} title={'Submit'} />}
       {claim && (
@@ -96,10 +96,10 @@ const styles = StyleSheet.create({
 export default App
 ```
 
-### Create ClaimR API Key
+### Create Unveiler API Key
 
-The last step is to add a ClaimR API key.
-Go to [dashboard.claimr.tools](https://dashboard.claimr.tools/) and create a new API key.
+The last step is to add a Unveiler API key.
+Go to [dashboard.unveiler.io](https://dashboard.unveiler.io/) and create a new API key.
 Copy this new key and replace `YOUR_API_KEY` in `App.js` with the API key you just obtained.
 
 ## Take It For a Spin
@@ -114,7 +114,7 @@ Wait until the "Submit" button appears, then you can press it to send your first
 
 :::note
 
-If you're experiencing issues, then try completely removing the app. The hot-reloading of React Native sometimes breaks the connection to the native Android code collecting the data for the ClaimR client.
+If you're experiencing issues, then try completely removing the app. The hot-reloading of React Native sometimes breaks the connection to the native Android code collecting the data for the Unveiler client.
 
 :::
 

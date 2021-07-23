@@ -2,13 +2,13 @@ module.exports = {
   docs: [
     {
       type: 'category',
-      label: 'ClaimR',
+      label: 'Unveiler',
       items: ['overview', 'use-cases'],
       collapsed: false,
     },
     {
       type: 'category',
-      label: 'ClaimR API',
+      label: 'Unveiler API',
       items: ['api/getting-started', 'api/jwts', 'api/schema'],
       collapsed: false,
     },

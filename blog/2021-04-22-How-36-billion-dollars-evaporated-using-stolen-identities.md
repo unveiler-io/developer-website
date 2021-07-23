@@ -1,7 +1,7 @@
 ---
 title: How 36 Billion Dollars Evaporated Using Stolen Identities
 author: Gijs Wissing
-author_title: Founder of ClaimR
+author_title: Founder of Unveiler
 #author_url:https://github.com/gijswissing
 author_image_url: /img/team/gijs.jpg
 tags: [Identity Theft, Fraud Prevention]
@@ -30,4 +30,4 @@ Preventing malicious use of stolen identity data lies in utilizing multiple hard
 
 ---
 
-Interested in applying proof of location in your mobile application? Check out the [ClaimR website](https://claimr.tools) for more information on integration of our location verification technology.
+Interested in applying proof of location in your mobile application? Check out the [Unveiler website](https://unveiler.io) for more information on integration of our location verification technology.

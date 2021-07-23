@@ -1,19 +1,19 @@
 const copyright = `Copyright © ${new Date().getFullYear()}, ClaimR B.V. - KvK 81570872`
 
 module.exports = {
-  title: 'ClaimR Developers',
+  title: 'Unveiler - Developer Documentation',
   tagline: "The simplest way to verify your user's location.",
-  url: 'https://developer.claimr.tools',
+  url: 'https://developer.unveiler.io',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
-  organizationName: 'ClaimR',
+  favicon: 'img/logo.svg',
+  organizationName: 'Unveiler',
   projectName: 'developer-website',
   themeConfig: {
     navbar: {
-      title: 'ClaimR',
+      title: 'Developer Documentation',
       logo: {
-        alt: 'ClaimR Logo',
-        src: 'img/icon.svg',
+        alt: 'Unveiler Logo',
+        src: 'img/logo.svg',
       },
       items: [
         {
@@ -33,7 +33,7 @@ module.exports = {
     },
     algolia: {
       apiKey: '032a61376505eb18dfa5b0b18726e97e',
-      indexName: 'ClaimR Developer Website',
+      indexName: 'Unveiler Developer Website',
       appId: 'RFMSBW8V2Z',
       searchParameters: {},
     },
@@ -82,7 +82,7 @@ module.exports = {
             },
             {
               label: 'Email',
-              href: 'mailto:contact@claimr.tools',
+              href: 'mailto:contact@unveiler.io',
             },
             {
               label: 'LinkedIn',
@@ -112,15 +112,15 @@ module.exports = {
           items: [
             {
               label: 'Website',
-              href: 'https://claimr.tools',
+              href: 'https://unveiler.io',
             },
             {
               label: 'Dashboard',
-              href: 'https://dashboard.claimr.tools',
+              href: 'https://dashboard.unveiler.io',
             },
             {
               label: 'Status',
-              href: 'https://status.claimr.tools',
+              href: 'https://stats.uptimerobot.com/Zz3BYsM85k',
             },
             {
               label: 'Privacy Policy',
@@ -128,7 +128,7 @@ module.exports = {
             },
             {
               label: 'API',
-              href: 'https://stats.uptimerobot.com/Zz3BYsM85k',
+              href: 'https://api.unveiler.io',
             },
           ],
         },
@@ -143,13 +143,13 @@ module.exports = {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/claimr/docs/edit/main/',
+          editUrl: 'https://github.com/claimr/developer-website/edit/main/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/claimr/docs/edit/main/',
+          editUrl: 'https://github.com/claimr/developer-website/edit/main/',
           feedOptions: {
             type: 'all',
             copyright,

@@ -1,5 +1,5 @@
 {
-  "index_name": "ClaimR Developer Website",
+  "index_name": "Unveiler Developer Website",
   "start_urls": ["https://developer.claimr.tools/"],
   "stop_urls": ["https://developer.claimr.tools/search", "https://developer.claimr.tools/tags"],
   "sitemap_urls": ["https://developer.claimr.tools/sitemap.xml"],
