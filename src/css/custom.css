@@ -32,6 +32,10 @@
   /* Hero */
   --ifm-hero-background-color: var(--custom-primary-lightest);
   --ifm-hero-text-color: var(--custom-content-color);
+
+  /* Navbar */
+  --ifm-navbar-height: 4rem;
+  --ifm-navbar-branding-height: 3.2rem
 }
 
 /* Docusaurus code highlighting */
@@ -71,4 +75,12 @@
 .hero .button--secondary:hover {
   background-color: var(--custom-background-color);
   border-color: rgba(0, 0, 0, 0);
+}
+
+.navbar__brand {
+  height: var(--ifm-navbar-branding-height);
+}
+
+.navbar__title {
+  margin-right: 2em;
 }
