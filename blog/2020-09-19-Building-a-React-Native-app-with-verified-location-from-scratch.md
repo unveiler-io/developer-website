@@ -39,16 +39,16 @@ yarn run android
 
 ## Integrating with Unveiler
 
-Next up we will be integrating with Unveiler by using our [React Native client](https://www.npmjs.com/package/@claimr/react-native-client).
+Next up we will be integrating with Unveiler by using our [React Native client](https://www.npmjs.com/package/@unveiler.io/react-native-client).
 This client makes it a lot easier to get started with Unveiler, as it takes care of all the GNSS specifics for you.
 It's completely open-source, so feel free to dig into it [here](https://github.com/ClaimR/react-native-client) if you're interested to get to know the inner workings.
 
-### Install `@claimr/react-native-client` as a Dependency
+### Install `@unveiler.io/react-native-client` as a Dependency
 
 Let's start by adding our React Native client by running the following command:
 
 ```bash
-yarn add @claimr/react-native-client
+yarn add @unveiler.io/react-native-client
 ```
 
 ### Adding the Unveiler Client
@@ -59,9 +59,9 @@ Open `App.js` and replace its content with the following code snippet:
 import React from 'react'
 import { StyleSheet, View, Text, Button } from 'react-native'
 
-import { ClaimrClient, useLazyVerifiedLocation } from '@claimr/react-native-client'
+import { UnveilerClient, useLazyVerifiedLocation } from '@unveiler.io/react-native-client'
 
-const client = new ClaimrClient({ apiKey: 'YOUR_API_KEY' })
+const client = new UnveilerClient({ apiKey: 'YOUR_API_KEY' })
 
 const App = () => {
   const { claim, state, submit } = useLazyVerifiedLocation({ client })

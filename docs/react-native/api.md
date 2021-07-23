@@ -3,13 +3,13 @@ id: api
 title: API
 ---
 
-On this page you can find all components part of the public interface of the `@claimr/react-native-client` package.
+On this page you can find all components part of the public interface of the `@unveiler.io/react-native-client` package.
 
-## `ClaimrClient`
+## `UnveilerClient`
 
-The `ClaimrClient` object maintains the connection with the API.
+The `UnveilerClient` object maintains the connection with the API.
 
-### `constructor(options)`: <`ClaimrClient`>
+### `constructor(options)`: <`UnveilerClient`>
 
 #### Parameters
 
@@ -22,7 +22,7 @@ The `ClaimrClient` object maintains the connection with the API.
 
 #### Returns
 
-`ClaimrClient`
+`UnveilerClient`
 
 ## `useLazyVerifiedLocation`
 
@@ -42,7 +42,7 @@ In every state which has an outgoing edge with `submit` you can request the loca
 #### Parameters
 
 - `options`: <`Object`>
-  - `client`: <`ClaimrClient`> Contains the API key used to make location verification requests.
+  - `client`: <`UnveilerClient`> Contains the API key used to make location verification requests.
   - `claim?`: <`Object`> The claim to be verified, if left empty, then it will default to collecting a claim for the user's current location, as determined by their reported GPS position.
     - `point`: <`PointClaim`>
       - `location`: <`{latitude: number, longitude: number}`> The coordinates of the point the user claims to be near at.
@@ -73,9 +73,13 @@ The example below shows how you can use the `VerifiedLocationProvider` to share 
 
 ```jsx
 import { Text } from 'react-native'
-import { ClaimrClient, useLazyVerifiedLocation, VerifiedLocationProvider } from '@claimr/react-native-client'
+import {
+  UnveilerClient,
+  useLazyVerifiedLocation,
+  VerifiedLocationProvider,
+} from '@unveiler.io/react-native-client'
 
-const client = new ClaimrClient({ apiKey: 'MY_API_KEY' })
+const client = new UnveilerClient({ apiKey: 'MY_API_KEY' })
 
 // Some child component which uses a verified location hook
 const MyComponent = ({ name }) => {

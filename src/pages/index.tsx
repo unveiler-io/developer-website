@@ -103,10 +103,10 @@ const Home = () => {
                 language={'tsx'}
                 theme={'dark'}
                 code={`
-import { ClaimrClient, useLazyVerifiedLocation } from '@claimr/react-native-client'
+import { UnveilerClient, useLazyVerifiedLocation } from '@unveiler.io/react-native-client'
 import { Text, Button } from 'react-native'
 
-const client = new ClaimrClient({ apiKey: 'YOUR_API_KEY' })
+const client = new UnveilerClient({ apiKey: 'YOUR_API_KEY' })
 
 const MyApp = () => {
   const { claim, submit } = useLazyVerifiedLocation({ client })

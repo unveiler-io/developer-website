@@ -5,27 +5,27 @@ title: Getting Started
 
 ## Installation
 
-First start by adding [Unveiler's React Native client](https://www.npmjs.com/package/@claimr/react-native-client) as a dependency to your React Native project.
+First start by adding [Unveiler's React Native client](https://www.npmjs.com/package/@unveiler.io/react-native-client) as a dependency to your React Native project.
 If you're using NPM, then run:
 
 ```bash
-npm install @claimr/react-native-client
+npm install @unveiler.io/react-native-client
 ```
 
 If you're using Yarn, run:
 
 ```bash
-yarn add @claimr/react-native-client
+yarn add @unveiler.io/react-native-client
 ```
 
-## Create a `ClaimrClient`
+## Create an `UnveilerClient`
 
-Next, create a `ClaimrClient` instance. For this you need your own API key, which you can get at the [Unveiler Dashboard][unveiler-dashboard].
+Next, create an `UnveilerClient` instance. For this you need your own API key, which you can get at the [Unveiler Dashboard][unveiler-dashboard].
 
 ```typescript
-import { ClaimrClient } from '@claimr/react-native-client'
+import { UnveilerClient } from '@unveiler.io/react-native-client'
 
-const client = new ClaimrClient({ apiKey: 'YOUR_API_KEY' })
+const client = new UnveilerClient({ apiKey: 'YOUR_API_KEY' })
 ```
 
 :::note
@@ -42,7 +42,7 @@ Once enough data has been collected, the `submit` function will be populated, wh
 After the location is verified, the results will be available in `claim` and also encoded as a JWT in `jwt`.
 
 ```tsx
-import { useLazyVerifiedLocation } from '@claimr/react-native-client'
+import { useLazyVerifiedLocation } from '@unveiler.io/react-native-client'
 
 const MyModule = () => {
   const { claim, jwt, submit } = useLazyVerifiedLocation({ client })
