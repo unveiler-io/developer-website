@@ -75,7 +75,7 @@ const Home = () => {
   return (
     <Layout
       title={``} // Set this to prefix the title
-      description="Documentation of ClaimR, providing verified locations of your user by analysing raw GPS measurements data."
+      description="Documentation of Unveiler, providing verified locations of your user by analysing raw GPS measurements data."
     >
       <header className={'hero'}>
         <div className="container">

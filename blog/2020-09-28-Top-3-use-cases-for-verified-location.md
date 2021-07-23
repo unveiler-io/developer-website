@@ -1,7 +1,7 @@
 ---
 title: Top 3 Use Cases for Verified Location Technology
 author: Gijs Wissing
-author_title: Founder of ClaimR
+author_title: Founder of Unveiler
 #author_url:https://github.com/gijswissing
 author_image_url: /img/team/gijs.jpg
 tags: [Verified Location, Use Cases]
@@ -34,6 +34,6 @@ Being able to prove your location reliably through your smartphone would be a gr
 
 ---
 
-At [ClaimR](https://claimr.tools) we're building verified location technology using raw GNSS measurements. By using the signal of location positioning satellites, such as GPS, we can offer our services anywhere in the world. Is your use-case not listed here? Then feel free to reach out to sales@claimr.tools and we can explore together if and how ClaimR can help to solve your problems.
+At [Unveiler](https://unveiler.io) we're building verified location technology using raw GNSS measurements. By using the signal of location positioning satellites, such as GPS, we can offer our services anywhere in the world. Is your use-case not listed here? Then feel free to reach out to sales@unveiler.io and we can explore together if and how Unveiler can help to solve your problems.
 
 <!--We are developers buiding tools for developers, hence we always try to make our tools as easy to use as possible. For example, [this guide](./blogs/2020-09-19-Building-a-React-Native-app-with-verified-location-from-scratch) shows how to build an app in React Native with verified location in less than 30 minutes.-->

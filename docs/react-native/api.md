@@ -17,8 +17,8 @@ The `ClaimrClient` object maintains the connection with the API.
 
   - `apiKey`: `string` (required)
 
-  The API key to use when sending requests to the ClaimR API.
-  You can get one at the [ClaimR Dashboard](https://dashboard.claimr.tools).
+  The API key to use when sending requests to the Unveiler API.
+  You can get one at the [Unveiler Dashboard](https://dashboard.unveiler.io).
 
 #### Returns
 
@@ -27,7 +27,7 @@ The `ClaimrClient` object maintains the connection with the API.
 ## `useLazyVerifiedLocation`
 
 The `useLazyVerifiedLocation` hook is used to verify a user's location.
-As it's lazy, the user needs to manually invoke it to send the request to the ClaimR API.
+As it's lazy, the user needs to manually invoke it to send the request to the Unveiler API.
 This can be done by calling the `submit` function once its defined by the hook.
 
 The hook tracks its state using the following state machine:
@@ -55,10 +55,10 @@ In every state which has an outgoing edge with `submit` you can request the loca
 | Property   | Type                                               | Description                                                                                                                                                                                                                                                                                                                            |
 | ---------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `state`    | `States`                                           | The current state of this location verification hook.                                                                                                                                                                                                                                                                                  |
-| `submit`   | `() => void` \| `undefined`                        | Callback to submit the location verification request to the ClaimR API. It will be `undefined` until sufficient raw GNSS data has been collected.                                                                                                                                                                                      |
-| `claim`    |  `PointClaim` \| `undefined`                       | Contains the validated location results from the ClaimR API. Only available after `submit` has been invoked and the location was in fact successfully validated.                                                                                                                                                                       |
+| `submit`   | `() => void` \| `undefined`                        | Callback to submit the location verification request to the Unveiler API. It will be `undefined` until sufficient raw GNSS data has been collected.                                                                                                                                                                                    |
+| `claim`    |  `PointClaim` \| `undefined`                       | Contains the validated location results from the Unveiler API. Only available after `submit` has been invoked and the location was in fact successfully validated.                                                                                                                                                                     |
 | `jwt`      | `string` \| `undefined`                            | Similar to `claim`, however now stored as a cryptographically secured JSON Web Token (JWT).                                                                                                                                                                                                                                            |
-| `message`  | `string` \| `undefined`                            | An optional message returned from the ClaimR API. Only used to retrieve the error message.                                                                                                                                                                                                                                             |
+| `message`  | `string` \| `undefined`                            | An optional message returned from the Unveiler API. Only used to retrieve the error message.                                                                                                                                                                                                                                           |
 | `progress` | `{current: number, target: number}` \| `undefined` | An optional progress indicator where `target` is the expected total amount of units of work until the next state change and `current` is the amount of units of work delivered. This value is currently only available for the `listening` state, where it reflects the amount of GNSS epochs collected before `minEpochs` is reached. |
 
 ## `VerifiedLocationProvider`

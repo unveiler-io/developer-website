@@ -1,11 +1,11 @@
 ---
 title: ClaimR Auth Release Announcement
 author: Adriaan Knapen
-author_title: Founder of ClaimR
+author_title: Founder of Unveiler
 author_url: https://github.com/Addono
 author_image_url: /img/team/adriaan.jpg
-tags: [ClaimR, ClaimR Auth, Google Play, App, Release]
-description: We are proud to announce that after a month of hard work, we have released ClaimR's first fully-fledged app, putting ClaimR's verified location technology directly in the hands of end users.
+tags: [ClaimR, ClaimR Auth, Unveiler, Google Play, App, Release]
+description: We are proud to announce that after a month of hard work, we have released Unveiler's first fully-fledged app, putting Unveiler's verified location technology directly in the hands of end users.
 image: img/claimr-auth_featured.jpg
 hide_table_of_contents: false
 ---
@@ -13,7 +13,7 @@ hide_table_of_contents: false
 Recently we have released our first publicly available app, named [ClaimR Auth](https://play.google.com/store/apps/details?id=tools.claimr.auth).
 With ClaimR Auth, we offer a drop-in replacement to widely used multi-factor authenticator apps, such as [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) and [Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator).
 
-Our app makes use of the ClaimR API to add an additional layer of security: You can limit the area in which the multi-factor authentication can be performed.
+Our app makes use of the Unveiler API to add an additional layer of security: You can limit the area in which the multi-factor authentication can be performed.
 This additional security measure gives you a unique method of protecting your accounts today.
 
 <!--truncate-->
@@ -38,6 +38,6 @@ Download ClaimR Auth in the [Google Play Store](https://play.google.com/store/ap
 
 ## Custom Solutions
 
-ClaimR Auth is build directly on top of the same ClaimR API as is publicly available.
+ClaimR Auth is build directly on top of the same Unveiler API as is publicly available.
 As such, if the service you would like to secure is not using OTP, then it is possible to build a custom solution specific for your use-case.
-Please consult our [documentation](/docs) on how to get started, or you can [drop us a line](mailto:contact@claimr.tools) to discuss about what's possible.
+Please consult our [documentation](/docs) on how to get started, or you can [drop us a line](mailto:contact@unveiler.io) to discuss about what's possible.

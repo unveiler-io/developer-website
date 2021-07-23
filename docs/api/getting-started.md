@@ -6,13 +6,13 @@ sidebar_label: Getting Started
 
 ## Overview
 
-The ClaimR API is a cloud based solution to verify the location of users. You can access the ClaimR API at https://api.claimr.tools.
+The Unveiler API is a cloud based solution to verify the location of users. You can access the Unveiler API at https://api.unveiler.io.
 
 The API is a [GraphQL](https://graphql.org) endpoint exposed over HTTP. The easiest way to get started is to make queries directly from the browser, so that's what we are going to do here.
 
 ## API Key
 
-As a preliminary step we need to get an API key. Go to the [ClaimR Dashboard](https://dashboard.claimr.tools), log in using your email and generate a new key. Copy the generated key and store it somewhere such that you can access it in the next step.
+As a preliminary step we need to get an API key. Go to the [Unveiler Dashboard](https://dashboard.unveiler.io), log in using your email and generate a new key. Copy the generated key and store it somewhere such that you can access it in the next step.
 
 :::tip
 
@@ -22,7 +22,7 @@ You can refer in the description of the key that you are using it to experiment,
 
 ## My First Query
 
-Open up https://api.claimr.tools and you will see the "Playground", an interactive environment to help you explore the GraphQL schema, and build and run queries. It even comes with syntax highlighting!
+Open up https://api.unveiler.io and you will see the "Playground", an interactive environment to help you explore the GraphQL schema, and build and run queries. It even comes with syntax highlighting!
 
 ### Authorization
 
@@ -70,7 +70,7 @@ query ValidPointClaimRequest {
 
 This is how your screen should like like after you entered the query and the HTTP Headers field:
 
-![Screenshot of ClaimR API Playground](/img/docs/claimr_playground_sample_query_screenshot.jpg)
+![Screenshot of Unveiler API Playground](/img/docs/claimr_playground_sample_query_screenshot.jpg)
 
 ### Interpretting the Results
 
@@ -101,8 +101,8 @@ After a couple of seconds your location verification request will be resolved an
 }
 ```
 
-What has happened? When we made our request, we asked the ClaimR API to verify that our location was indeed within 100 meters of the coordinate with latitude and longitude of respectively 52.9519 and -1.1841. As context ("proof") we offered raw GNSS data.
+What has happened? When we made our request, we asked the Unveiler API to verify that our location was indeed within 100 meters of the coordinate with latitude and longitude of respectively 52.9519 and -1.1841. As context ("proof") we offered raw GNSS data.
 
 The raw GNSS data was analysed and resolved to a location, which was verified to be within 100 meters of the coordinate we said we would be close to. Hence, the `status` of this request is `GRANTED`. (In fact, the GNSS measurements were taken at approximately 9.5 meters from the mentioned coordinate. Try requesting a claim with a smaller radius, such as 1 meter.)
 
-Since our request was granted, we also receive a [JWT](https://jwt.io 'JSON Web Token'), which contains these claims, cryptographically signed by ClaimR. This JWT can be used to proof to other parties the verified status of their location.
+Since our request was granted, we also receive a [JWT](https://jwt.io 'JSON Web Token'), which contains these claims, cryptographically signed by Unveiler. This JWT can be used to proof to other parties the verified status of their location.

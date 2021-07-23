@@ -3,13 +3,13 @@ id: schema
 title: GraphQL Schema
 ---
 
-The ClaimR API has interactive schema documentation of it's GraphQL endpoint at the Playground, which can be accessed by opening https://api.claimr.tools in your browser. At the right, you can explore the queries available by the API under "DOCS" and see the schema under "SCHEMA".
+The Unveiler API has interactive schema documentation of it's GraphQL endpoint at the Playground, which can be accessed by opening https://api.unveiler.io in your browser. At the right, you can explore the queries available by the API under "DOCS" and see the schema under "SCHEMA".
 
 When writing queries in the playground you will have access to syntax highlighting. Which makes it faster and easier to formulate your queries.
 
 ## Authorization
 
-Authorization to the ClaimR API is required when making queries. API keys are used for authentication purposes, you can generate one through the [ClaimR Dashboard](https://dashboard.claimr.tools).
+Authorization to the Unveiler API is required when making queries. API keys are used for authentication purposes, you can generate one through the [Unveiler Dashboard](https://dashboard.unveiler.io).
 
 The API key should be added as an HTTP header. The header name should be `Authorization` and the value should be `Bearer YOUR_API_KEY`.
 
@@ -17,7 +17,7 @@ The API key should be added as an HTTP header. The header name should be `Author
 
 ### `verifyLocation`
 
-All queries to the ClaimR API use the `verifyLocation` query. It's arguments consist of the location where the user claims to be and context of the user's location, which acts as the proof.
+All queries to the Unveiler API use the `verifyLocation` query. It's arguments consist of the location where the user claims to be and context of the user's location, which acts as the proof.
 
 #### Claims
 

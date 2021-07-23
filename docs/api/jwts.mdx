@@ -15,13 +15,13 @@ eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGFpbSI6eyJwb2ludCI6eyJsb2NhdGlvbiI6eyJ
 
 ## Why
 
-The JSON Web Token (JWT) contains the claim asserted in the request to the ClaimR API, including a cryptographical signature.
-A JWT allows everyone to read the content of this token and verify that it has been created by ClaimR by looking at the cryptographic signature.
+The JSON Web Token (JWT) contains the claim asserted in the request to the Unveiler API, including a cryptographical signature.
+A JWT allows everyone to read the content of this token and verify that it has been created byUnveiler by looking at the cryptographic signature.
 
-These JWTs can be used when the request to ClaimR is made on an untrusted device which still needs to prove its verified location to another device.
+These JWTs can be used when the request toUnveiler is made on an untrusted device which still needs to prove its verified location to another device.
 Let's take a mobile phone of an end-user as the untrusted device.
-The mobile phone makes a request to ClaimR and stores the returned JWT.
-Later, the mobile phone can send the JWT to your backend service, which reads and validates the JWT and can now be certain that the phone in fact got its location verified by ClaimR.
+The mobile phone makes a request toUnveiler and stores the returned JWT.
+Later, the mobile phone can send the JWT to your backend service, which reads and validates the JWT and can now be certain that the phone in fact got its location verified byUnveiler.
 
 ## Verifying JWTs
 
@@ -32,9 +32,9 @@ When selecting a library, ensure that it at least supports `RS256`, which should
 
 After the JWT is verified, inspect the content and apply your business logic to validate that the content matches with what you expected to find.
 
-### Download ClaimR's Public Key
+### DownloadUnveiler's Public Key
 
-Download the ClaimR public key from [here](/keys/public.pem) and save it as `public.pem` in your source code directory. Now we can verify the token using the following code.
+Download theUnveiler public key from [here](/keys/public.pem) and save it as `public.pem` in your source code directory. Now we can verify the token using the following code.
 
 ### Install Dependencies
 
@@ -49,7 +49,7 @@ Download the ClaimR public key from [here](/keys/public.pem) and save it as `pub
 <TabItem value="js">
 
 
-Here we will showcase how to verify a ClaimR signed JWT using the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) library, which is created and maintained by [Auth0](https://auth0.com/).
+Here we will showcase how to verify aUnveiler signed JWT using the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) library, which is created and maintained by [Auth0](https://auth0.com/).
 To install the dependency run:
 
 ```bash
@@ -66,7 +66,7 @@ yarn add jsonwebtoken
 <TabItem value="ts">
 
 
-Here we will showcase how to verify a ClaimR signed JWT using the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) library, which is created and maintained by [Auth0](https://auth0.com/).
+Here we will showcase how to verify aUnveiler signed JWT using the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) library, which is created and maintained by [Auth0](https://auth0.com/).
 To install it as a dependency together with its types:
 
 ```bash
@@ -103,10 +103,10 @@ yarn add -D @types/jsonwebtoken
 const { verify } = require('jsonwebtoken')
 const { readFileSync } = require('fs')
 
-const claimrPublicKey = readFileSync('public.pem')
+const unveilerPublicKey = readFileSync('public.pem')
 const jwt = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGFpbSI6eyJwb2ludCI6eyJsb2NhdGlvbiI6eyJsYXRpdHVkZSI6NTIuOTUxOSwibG9uZ2l0dWRlIjotMS4xODQxfSwicmFkaXVzIjoxMDB9fSwicHJvb2YiOiJHTlNTIiwiaWF0IjoxNTk1ODQ2Mjc2fQ.Ko1otS6zZpZ1JpYymZpGXM22v7GQW0wqcU4cum_Yxb0xrbM2UGHCIwpKEvkOgA-ITEjj65AgLfs8AmNJJbUFMzVZmaATvVoy_wW2JMUn2oHcBstzc5wMUYrELjmGy0oOXJcdxX_EirKVkBaOW1FPf_m2iMZLxsLAhd9S2Afj8ICCnVULyuPCNxfsED-cqOdgzrIBzyHfq6jx9CclvK_Bo-uMML5_OymsvyLnFNCXplPbGx9pG2qjzBFp_K-zEnHlgRDxKUIkfn-9VxPYErQIFG7N4_lvJ_XN8XNiec6OW-WOkEpRaTiyfqzHYsoZy057c7D4gznr98Yl-NrFAVKT_Q'
 
-verify(jwt, claimrPublicKey, { algorithms: ['RS256'] })
+verify(jwt, unveilerPublicKey, { algorithms: ['RS256'] })
 // {
 //   claim: { point: { location: { latitude: 52.9519, longitude: -1.1841 }, radius: 100, radius: 100 } },
 //   proof: 'GNSS',
@@ -130,10 +130,10 @@ If our JWT would be tampered with, then verify would throw a `JsonWebTokenError`
 import { verify } from 'jsonwebtoken'
 import { readFileSync } from 'fs'
 
-const claimrPublicKey = readFileSync('public.pem')
+const unveilerPublicKey = readFileSync('public.pem')
 const jwt = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGFpbSI6eyJwb2ludCI6eyJsb2NhdGlvbiI6eyJsYXRpdHVkZSI6NTIuOTUxOSwibG9uZ2l0dWRlIjotMS4xODQxfSwicmFkaXVzIjoxMDB9fSwicHJvb2YiOiJHTlNTIiwiaWF0IjoxNTk1ODQ2Mjc2fQ.Ko1otS6zZpZ1JpYymZpGXM22v7GQW0wqcU4cum_Yxb0xrbM2UGHCIwpKEvkOgA-ITEjj65AgLfs8AmNJJbUFMzVZmaATvVoy_wW2JMUn2oHcBstzc5wMUYrELjmGy0oOXJcdxX_EirKVkBaOW1FPf_m2iMZLxsLAhd9S2Afj8ICCnVULyuPCNxfsED-cqOdgzrIBzyHfq6jx9CclvK_Bo-uMML5_OymsvyLnFNCXplPbGx9pG2qjzBFp_K-zEnHlgRDxKUIkfn-9VxPYErQIFG7N4_lvJ_XN8XNiec6OW-WOkEpRaTiyfqzHYsoZy057c7D4gznr98Yl-NrFAVKT_Q'
 
-verify(jwt, claimrPublicKey, { algorithms: ['RS256'] })
+verify(jwt, unveilerPublicKey, { algorithms: ['RS256'] })
 // {
 //   claim: { point: { location: { latitude: 52.9519, longitude: -1.1841 }, radius: 100, radius: 100 } },
 //   proof: 'GNSS',
@@ -155,7 +155,7 @@ If our JWT would be tampered with, then verify would throw a `JsonWebTokenError`
 ## The Subject Field `sub`
 
 The JWT standard includes the subject (`sub`) field.
-When making a request against the ClaimR API the user can optionally supply the value of this field.
+When making a request against the Unveiler API the user can optionally supply the value of this field.
 This can be used to add a unique identifier to the request, which allows you to later detect replay attacks.
 
 What value to use for the subject field depends on the use-case.
@@ -168,7 +168,7 @@ When validating the token you retrieve the expected context based on the subject
 
 ## Technical Details
 
-ClaimR uses a combination of RSA - specifically `RSASSA-PKCS1-v1_5` - with SHA-256 to secure our JWTs.
+We use a combination of RSA - specifically `RSASSA-PKCS1-v1_5` - with SHA-256 to secure our JWTs.
 This combination is part of the IETF standard [RFC 7519](https://tools.ietf.org/html/rfc7519), which described the JWT specification and refers to this combination as `RS256`.
 Support of `RS256` is not mandatory by this standard, however it is still widely supported as the standard recommends supporting this.
 
