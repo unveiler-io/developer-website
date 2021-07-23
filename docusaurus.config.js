@@ -10,7 +10,7 @@ module.exports = {
   projectName: 'developer-website',
   themeConfig: {
     navbar: {
-      title: 'Developer Documentation',
+      title: 'Developer Docs',
       logo: {
         alt: 'Unveiler Logo',
         src: 'img/logo.svg',
