@@ -1,8 +1,8 @@
 {
   "index_name": "Unveiler Developer Website",
-  "start_urls": ["https://developer.claimr.tools/"],
-  "stop_urls": ["https://developer.claimr.tools/search", "https://developer.claimr.tools/tags"],
-  "sitemap_urls": ["https://developer.claimr.tools/sitemap.xml"],
+  "start_urls": ["https://developer.unveiler.io/"],
+  "stop_urls": ["https://developer.unveiler.io/search", "https://developer.unveiler.io/tags"],
+  "sitemap_urls": ["https://developer.unveiler.io/sitemap.xml"],
   "sitemap_alternate_links": true,
   "selectors": {
     "lvl0": {
