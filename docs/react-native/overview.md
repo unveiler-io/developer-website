@@ -10,4 +10,4 @@ We believe that it's important that you trust and own the code you are adding to
 Hence, the React Native client is released under a permissive open-source licence.
 If there's anything you would like changed, then please feel free to open an issue on Github.
 
-[rn-client-github]: https://github.com/ClaimR/react-native-client
+[rn-client-github]: https://github.com/unveiler-io/react-native-client

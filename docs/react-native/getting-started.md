@@ -61,7 +61,7 @@ const MyModule = () => {
 }
 ```
 
-For a more elaborate useage example, see our example React Native client [here](https://github.com/ClaimR/react-native-client/blob/master/example/src/App.tsx) and explore the [API](/docs/react-native/api).
+For a more elaborate useage example, see our example React Native client [here](https://github.com/unveiler-io/react-native-client/blob/master/example/src/App.tsx) and explore the [API](/docs/react-native/api).
 
 [unveiler-dashboard]: https://dashboard.unveiler.io
 [npm-react-native-config]: https://www.npmjs.com/package/react-native-config

@@ -15,7 +15,7 @@ You don't need prior experience with React or React Native in order to be able t
 
 <!--truncate-->
 
-You can find the source code of the end result [on Github](https://github.com/ClaimR/blog-builing-a-rn-app).
+You can find the source code of the end result [on Github](https://github.com/unveiler-io/blog-builing-a-rn-app).
 
 ## Setup Development Environment
 
@@ -41,7 +41,7 @@ yarn run android
 
 Next up we will be integrating with Unveiler by using our [React Native client](https://www.npmjs.com/package/@unveiler.io/react-native-client).
 This client makes it a lot easier to get started with Unveiler, as it takes care of all the GNSS specifics for you.
-It's completely open-source, so feel free to dig into it [here](https://github.com/ClaimR/react-native-client) if you're interested to get to know the inner workings.
+It's completely open-source, so feel free to dig into it [here](https://github.com/unveiler-io/react-native-client) if you're interested to get to know the inner workings.
 
 ### Install `@unveiler.io/react-native-client` as a Dependency
 

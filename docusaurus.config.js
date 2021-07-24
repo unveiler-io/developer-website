@@ -25,7 +25,7 @@ module.exports = {
         { to: 'docs/pricing', label: 'Pricing', position: 'left' },
         { to: 'blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/ClaimR',
+          href: 'https://github.com/unveiler-io',
           label: 'GitHub',
           position: 'right',
         },
@@ -74,7 +74,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/ClaimR',
+              href: 'https://github.com/unveiler-io',
             },
             {
               label: 'YouTube',
@@ -143,13 +143,13 @@ module.exports = {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/claimr/developer-website/edit/main/',
+          editUrl: 'https://github.com/unveiler-io/developer-website/edit/main/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/claimr/developer-website/edit/main/',
+          editUrl: 'https://github.com/unveiler-io/developer-website/edit/main/',
           feedOptions: {
             type: 'all',
             copyright,
