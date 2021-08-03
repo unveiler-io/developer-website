@@ -166,7 +166,7 @@ module.exports = {
     [
       'docusaurus-plugin-plausible',
       {
-        domain: 'developer.claimr.tools',
+        domain: 'developer.unveiler.io',
       },
     ],
   ],
